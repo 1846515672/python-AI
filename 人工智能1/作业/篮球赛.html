@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html style="overflow:-moz-scrollbars-vertical;overflow-y:scroll;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="球员数据查询,数据查询器,单场比赛,赛季场均,nba,"/>
+    <meta name="description" content="球员数据查询,数据查询器,单场比赛,赛季场均,nba,"/>
+    <link href="/css/stat_box/stat_box.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/query/query.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript" src="./common/jquery.js"></script>
+    <title>数据查询结果|数据nba|stat-nba|历史数据|技术统计|最全最专业中文nba数据库</title>
+</head>
+<body>
+<div id="page">
+    <div id="background">
+        <script language="javascript" type="text/javascript" src="/common/jquery.js"></script>
+        <div style="display:none">
+            <script type="text/javascript">
+
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F102e5c22af038a553a8610096bcc8bd4' type='text/javascript'%3E%3C/script%3E"));
+
+            </script>
+            <script>
+
+                /*$(document).ready(function(){
+
+                    adList = $.ajax({url:"/ad.php",async:false}).responseText.split('------');
+
+
+
+                    $("#adHengfu")[0].outerHTML = (adList[0]);
+
+                    //$("#adCebianLeft").html(adList[1.txt]);
+
+                    //$("#adCebianRight").html(adList[2]);
+
+                    //$("head").append(adList[3]);
+
+                 });*/
+
+            </script>
+        </div>
+        <div class="header" style="margin-bottom: 0px;">
+            <div class="logo">
+                <a hidefocus="true" href="/index.php"></a>
+            </div>
+            <div style="float:right;width:755px;">
+                <div class="announcement" id="announcement">
+                </div>
+                <div class="quote" id="playerQuote">
+                </div>
+                <div class="itemList">
+
+
+                    <div class="item normal">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/navigator.php">网站导航</a></div>
+                    <div class="item normal">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/playerList.php">球员/教练</a></div>
+                    <div class="item normal">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/teamList.php">&nbsp;&nbsp;&nbsp;&nbsp;球队&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </div>
+                    <div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"
+                         onmouseout="$(this).find('.itemDropDown').hide()">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/season/2018.html">赛季/赛程</a>
+                        <div class="itemDropDown" style="height:90px">
+                            <a href="/season/2018.html">常规赛排名</a>
+                            <a href="/playoff/2018.html">季后赛排名</a>
+                            <a href="/wper/2018.html">球队战绩排名</a>
+                            <a href="/playoffchart/2018.html">季后赛对阵表</a>
+                            <a href="/gameList_simple.html">详细赛程</a>
+                        </div>
+                    </div>
+                    <div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"
+                         onmouseout="$(this).find('.itemDropDown').hide()">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/award/item8.html">荣誉/排名</a>
+                        <div class="itemDropDown" style="height:360px">
+                            <a href="/award/item16.html">名人堂</a>
+                            <a href="/award/item15.html">总冠军</a>
+                            <a href="/award/item5.html">总决赛MVP</a>
+                            <a href="/award/item0.html">MVP</a>
+                            <a href="/award/item8.html">最佳阵容</a>
+                            <a href="/award/item7.html">月最佳球员</a>
+                            <a href="/award/item18.html">周最佳球员</a>
+                            <a href="/award/item2.html">最佳防守球员</a>
+                            <a href="/award/item10.html">最佳防守阵容</a>
+                            <a href="/award/item1.html">最佳新秀</a>
+                            <a href="/award/item9.html">最佳新秀阵容</a>
+                            <a href="/award/item3.html">最佳第六人</a>
+                            <a href="/award/item4.html">进步最快球员</a>
+                            <a href="/award/item6.html">全明星MVP</a>
+                            <a href="/award/item17.html">最佳教练</a>
+                            <a href="/award/item12.html">全明星正赛</a>
+                            <a>——————</a>
+                            <a href="/award/item11.html">选秀顺位排名</a>
+                            <a href="/award/item13.html">进阶数据</a>
+                            <a href="/award/item14.html">各项数据王</a>
+                            <a href="/award/item19.html">薪金排名</a>
+                        </div>
+                    </div>
+                    <div class="item currentItem" onmouseover="$(this).find('.itemDropDown').show()"
+                         onmouseout="$(this).find('.itemDropDown').hide()">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/queryZ.php?QueryType=all&AllType=season&AT=avg&crtcol=pts&order=1">数据查询器</a>
+                        <div class="itemDropDown" style="height:126px">
+                            <a href="/queryZ.php?QueryType=all&AllType=season&AT=avg&crtcol=pts&order=1">球员数据</a>
+                            <a href="/query_pbpZ.php">特定时刻数据</a>
+                            <a href="/query_award.php">球员荣誉</a>
+                            <a href="/query_teamZ.php?QueryType=ss&SsType=season&Formular=result_out_wdivideleftbracketresult_out_waddresult_out_lrightbracketmultiply100&crtcol=formular&order=1">球队数据</a>
+                            <a href="/query_coach.php">教练数据</a>
+                            <a href="/query_playercompare.php">球员对比</a>
+                            <a href="/award/item13.html">进阶数据</a>
+                        </div>
+                    </div>
+                    <div class="item normal">
+                        <div class="itemTop"></div>
+                        <a hidefocus="true" href="/award/item13.html">进阶数据</a></div>
+                    <div class="item normal" onmouseover="$(this).find('.itemDropDown').show()"
+                         onmouseout="$(this).find('.itemDropDown').hide()">
+                        <div class="itemTop"></div>
+                        <div style="font-size:12px">论坛功能已关闭</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $.ajax(
+                {
+
+                    url: '/ajax/quote.php?seed=' + Math.random(),
+
+                    async: false,
+
+                    success: function (responseText, statusText, xhr, $form) {
+
+                        document.getElementById("playerQuote").innerHTML = responseText;
+
+                    }
+
+                })
+
+            $.ajax(
+                {
+
+                    url: '/ajax/announcement.php?seed=' + Math.random(),
+
+                    async: false,
+
+                    success: function (responseText, statusText, xhr, $form) {
+
+                        document.getElementById("announcement").innerHTML = responseText;
+
+                    }
+
+                })
+
+
+        </script>
+        <div class="clear"></div>
+        <script type="text/javascript">    (function () {
+            var s = "_" + Math.random().toString(36).slice(2);
+            document.write('<div style="" id="' + s + '"></div>');
+            (window.slotbydup = window.slotbydup || []).push({id: "u3546525", container: s});
+        })();</script>
+        <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer"></script>
+        <div style="width: 960px;float: left;margin-bottom: 20px;margin-top: 10px;">
+            <div class="title" style="margin-bottom:0px;margin-top: 0px;">数据查询结果</div>
+            <div style="float: left;margin-top: 12px;margin-left: 5px;">
+                <a href="/queryZ.php?page=%7Bpage%7D&QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=60"
+                   style="color: #009CFF;font-size: 14px;font-weight: bold;">返回球员数据查询器>></a>
+                <a href="/queryZ.php?page=%7Bpage%7D&QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=60"
+                   style="color: #009CFF;font-size: 14px;font-weight: bold;">重新编辑查询选项>></a>
+            </div>
+        </div>
+        <div style="width: 960px;float: left;">
+            <div id="personalinfo" style="width: 960px;float: left;">
+
+                <div id="label_show_result" class="stat_box"
+                     style=" margin-top:0px;width: 980px;margin-left: -10px;margin-right: -10px;">
+                    <div class="queryinfo" style="width: 980px;">
+                        <div class='roo'>查询<font class='sstrong'>生涯常规赛场均</font></div>
+                        <div class='roo'><font class='sstrong'>依照</font>得分<font class='sstrong'>降序排列</font></div>
+                        <div style='width:950px;float:left'>
+                            <div class='roo' style='float: left;'>小贴士<font class='sstrong'> 点击查询结果的</font>表头<font
+                                    class='sstrong'>即可按此项目排序</font></div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 0px;float: left;margin-top:2px;">
+                        <table class="stat_box" style="width: 980px;">
+                            <thead>
+                            <tr>
+                                <th class="normal row change_col 0 thtwothing" onclick="location='#'">&nbsp;</th>
+                                <th class="normal player_name_out change_col 1 thtwothing"
+                                    onclick="location='/query.php?crtcol=player_name_out&order=0&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    球员
+                                </th>
+                                <th class="normal g change_col 2 thtwothing"
+                                    onclick="location='/query.php?crtcol=g&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    出场
+                                </th>
+                                <th class="normal gs change_col 3 thtwothing"
+                                    onclick="location='/query.php?crtcol=gs&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    首发
+                                </th>
+                                <th class="normal mp change_col 4 thtwothing"
+                                    onclick="location='/query.php?crtcol=mp&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    时间
+                                </th>
+                                <th class="normal fgper change_col 5 thtwothing"
+                                    onclick="location='/query.php?crtcol=fgper&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    投篮
+                                </th>
+                                <th class="normal fg change_col 6 thtwothing"
+                                    onclick="location='/query.php?crtcol=fg&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    命中
+                                </th>
+                                <th class="normal fga change_col 7 thtwothing"
+                                    onclick="location='/query.php?crtcol=fga&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    出手
+                                </th>
+                                <th class="normal threepper change_col 8 thtwothing"
+                                    onclick="location='/query.php?crtcol=threepper&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    三分
+                                </th>
+                                <th class="normal threep change_col 9 thtwothing"
+                                    onclick="location='/query.php?crtcol=threep&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    命中
+                                </th>
+                                <th class="normal threepa change_col 10 thtwothing"
+                                    onclick="location='/query.php?crtcol=threepa&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    出手
+                                </th>
+                                <th class="normal ftper change_col 11 thtwothing"
+                                    onclick="location='/query.php?crtcol=ftper&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    罚球
+                                </th>
+                                <th class="normal ft change_col 12 thtwothing"
+                                    onclick="location='/query.php?crtcol=ft&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    命中
+                                </th>
+                                <th class="normal fta change_col 13 thtwothing"
+                                    onclick="location='/query.php?crtcol=fta&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    出手
+                                </th>
+                                <th class="normal trb change_col 14 thtwothing"
+                                    onclick="location='/query.php?crtcol=trb&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    篮板
+                                </th>
+                                <th class="normal orb change_col 15 thtwothing"
+                                    onclick="location='/query.php?crtcol=orb&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    前场
+                                </th>
+                                <th class="normal drb change_col 16 thtwothing"
+                                    onclick="location='/query.php?crtcol=drb&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    后场
+                                </th>
+                                <th class="normal ast change_col 17 thtwothing"
+                                    onclick="location='/query.php?crtcol=ast&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    助攻
+                                </th>
+                                <th class="normal stl change_col 18 thtwothing"
+                                    onclick="location='/query.php?crtcol=stl&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    抢断
+                                </th>
+                                <th class="normal blk change_col 19 thtwothing"
+                                    onclick="location='/query.php?crtcol=blk&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    盖帽
+                                </th>
+                                <th class="normal tov change_col 20 thtwothing"
+                                    onclick="location='/query.php?crtcol=tov&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    失误
+                                </th>
+                                <th class="normal pf change_col 21 thtwothing"
+                                    onclick="location='/query.php?crtcol=pf&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    犯规
+                                </th>
+                                <th class="current pts change_col 22 thtwothing"
+                                    onclick="location='/query.php?crtcol=pts&order=0&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    得分<img class="arrow" src="/css/stat_box/order_arrow1.png"/></th>
+                                <th class="normal w change_col 23 thtwothing"
+                                    onclick="location='/query.php?crtcol=w&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    胜
+                                </th>
+                                <th class="normal l change_col 24 thtwothing"
+                                    onclick="location='/query.php?crtcol=l&order=1&page={page}&QueryType=all&AllType=season&AT=avg&PageNum=60#label_show_result'">
+                                    负
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="normal row change_color col0 row0">1</td>
+                                <td class="normal player_name_out change_color col1 row0"><a class='query_player_name'
+                                                                                             href='./player/1717.html'
+                                                                                             target='_blank'>迈克尔-乔丹</a>
+                                </td>
+                                <td class="normal g change_color col2 row0">1072</td>
+                                <td class="normal gs change_color col3 row0">1039</td>
+                                <td class="normal mp change_color col4 row0">38.3</td>
+                                <td class="normal fgper change_color col5 row0">49.7%</td>
+                                <td class="normal fg change_color col6 row0">11.4</td>
+                                <td class="normal fga change_color col7 row0">22.9</td>
+                                <td class="normal threepper change_color col8 row0">32.7%</td>
+                                <td class="normal threep change_color col9 row0">0.5</td>
+                                <td class="normal threepa change_color col10 row0">1.7</td>
+                                <td class="normal ftper change_color col11 row0">83.5%</td>
+                                <td class="normal ft change_color col12 row0">6.8</td>
+                                <td class="normal fta change_color col13 row0">8.2</td>
+                                <td class="normal trb change_color col14 row0">6.2</td>
+                                <td class="normal orb change_color col15 row0">1.6</td>
+                                <td class="normal drb change_color col16 row0">4.7</td>
+                                <td class="normal ast change_color col17 row0">5.3</td>
+                                <td class="normal stl change_color col18 row0">2.3</td>
+                                <td class="normal blk change_color col19 row0">0.8</td>
+                                <td class="normal tov change_color col20 row0">2.7</td>
+                                <td class="normal pf change_color col21 row0">2.6</td>
+                                <td class="current pts change_color col22 row0">30.1</td>
+                                <td class="normal w change_color col23 row0"></td>
+                                <td class="normal l change_color col24 row0"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row1">2</td>
+                                <td class="normal player_name_out change_color col1 row1"><a class='query_player_name'
+                                                                                             href='./player/693.html'
+                                                                                             target='_blank'>威尔特-张伯伦</a>
+                                </td>
+                                <td class="normal g change_color col2 row1">1045</td>
+                                <td class="normal gs change_color col3 row1"></td>
+                                <td class="normal mp change_color col4 row1">45.8</td>
+                                <td class="normal fgper change_color col5 row1">54.0%</td>
+                                <td class="normal fg change_color col6 row1">12.1</td>
+                                <td class="normal fga change_color col7 row1">22.5</td>
+                                <td class="normal threepper change_color col8 row1"></td>
+                                <td class="normal threep change_color col9 row1"></td>
+                                <td class="normal threepa change_color col10 row1"></td>
+                                <td class="normal ftper change_color col11 row1">51.1%</td>
+                                <td class="normal ft change_color col12 row1">5.8</td>
+                                <td class="normal fta change_color col13 row1">11.4</td>
+                                <td class="normal trb change_color col14 row1">22.9</td>
+                                <td class="normal orb change_color col15 row1"></td>
+                                <td class="normal drb change_color col16 row1"></td>
+                                <td class="normal ast change_color col17 row1">4.4</td>
+                                <td class="normal stl change_color col18 row1"></td>
+                                <td class="normal blk change_color col19 row1"></td>
+                                <td class="normal tov change_color col20 row1"></td>
+                                <td class="normal pf change_color col21 row1">2.0</td>
+                                <td class="current pts change_color col22 row1">30.1</td>
+                                <td class="normal w change_color col23 row1"></td>
+                                <td class="normal l change_color col24 row1"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row2">3</td>
+                                <td class="normal player_name_out change_color col1 row2"><a class='query_player_name'
+                                                                                             href='./player/444.html'
+                                                                                             target='_blank'>埃尔金·贝勒</a>
+                                </td>
+                                <td class="normal g change_color col2 row2">846</td>
+                                <td class="normal gs change_color col3 row2"></td>
+                                <td class="normal mp change_color col4 row2">40.0</td>
+                                <td class="normal fgper change_color col5 row2">43.1%</td>
+                                <td class="normal fg change_color col6 row2">10.3</td>
+                                <td class="normal fga change_color col7 row2">23.8</td>
+                                <td class="normal threepper change_color col8 row2"></td>
+                                <td class="normal threep change_color col9 row2"></td>
+                                <td class="normal threepa change_color col10 row2"></td>
+                                <td class="normal ftper change_color col11 row2">78.0%</td>
+                                <td class="normal ft change_color col12 row2">6.8</td>
+                                <td class="normal fta change_color col13 row2">8.7</td>
+                                <td class="normal trb change_color col14 row2">13.5</td>
+                                <td class="normal orb change_color col15 row2"></td>
+                                <td class="normal drb change_color col16 row2"></td>
+                                <td class="normal ast change_color col17 row2">4.3</td>
+                                <td class="normal stl change_color col18 row2"></td>
+                                <td class="normal blk change_color col19 row2"></td>
+                                <td class="normal tov change_color col20 row2"></td>
+                                <td class="normal pf change_color col21 row2">3.1</td>
+                                <td class="current pts change_color col22 row2">27.4</td>
+                                <td class="normal w change_color col23 row2"></td>
+                                <td class="normal l change_color col24 row2"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row3">4</td>
+                                <td class="normal player_name_out change_color col1 row3"><a class='query_player_name'
+                                                                                             href='./player/1862.html'
+                                                                                             target='_blank'>勒布朗-詹姆斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row3">1227</td>
+                                <td class="normal gs change_color col3 row3">1226</td>
+                                <td class="normal mp change_color col4 row3">38.5</td>
+                                <td class="normal fgper change_color col5 row3">50.4%</td>
+                                <td class="normal fg change_color col6 row3">9.9</td>
+                                <td class="normal fga change_color col7 row3">19.6</td>
+                                <td class="normal threepper change_color col8 row3">34.4%</td>
+                                <td class="normal threep change_color col9 row3">1.5</td>
+                                <td class="normal threepa change_color col10 row3">4.2</td>
+                                <td class="normal ftper change_color col11 row3">73.5%</td>
+                                <td class="normal ft change_color col12 row3">5.9</td>
+                                <td class="normal fta change_color col13 row3">8.0</td>
+                                <td class="normal trb change_color col14 row3">7.4</td>
+                                <td class="normal orb change_color col15 row3">1.2</td>
+                                <td class="normal drb change_color col16 row3">6.2</td>
+                                <td class="normal ast change_color col17 row3">7.3</td>
+                                <td class="normal stl change_color col18 row3">1.6</td>
+                                <td class="normal blk change_color col19 row3">0.8</td>
+                                <td class="normal tov change_color col20 row3">3.5</td>
+                                <td class="normal pf change_color col21 row3">1.8</td>
+                                <td class="current pts change_color col22 row3">27.1</td>
+                                <td class="normal w change_color col23 row3">813</td>
+                                <td class="normal l change_color col24 row3">414</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row4">5</td>
+                                <td class="normal player_name_out change_color col1 row4"><a class='query_player_name'
+                                                                                             href='./player/3925.html'
+                                                                                             target='_blank'>杰里-韦斯特</a>
+                                </td>
+                                <td class="normal g change_color col2 row4">932</td>
+                                <td class="normal gs change_color col3 row4"></td>
+                                <td class="normal mp change_color col4 row4">39.2</td>
+                                <td class="normal fgper change_color col5 row4">47.4%</td>
+                                <td class="normal fg change_color col6 row4">9.7</td>
+                                <td class="normal fga change_color col7 row4">20.4</td>
+                                <td class="normal threepper change_color col8 row4"></td>
+                                <td class="normal threep change_color col9 row4"></td>
+                                <td class="normal threepa change_color col10 row4"></td>
+                                <td class="normal ftper change_color col11 row4">81.4%</td>
+                                <td class="normal ft change_color col12 row4">7.7</td>
+                                <td class="normal fta change_color col13 row4">9.4</td>
+                                <td class="normal trb change_color col14 row4">5.8</td>
+                                <td class="normal orb change_color col15 row4"></td>
+                                <td class="normal drb change_color col16 row4"></td>
+                                <td class="normal ast change_color col17 row4">6.7</td>
+                                <td class="normal stl change_color col18 row4"></td>
+                                <td class="normal blk change_color col19 row4"></td>
+                                <td class="normal tov change_color col20 row4"></td>
+                                <td class="normal pf change_color col21 row4">2.6</td>
+                                <td class="current pts change_color col22 row4">27.0</td>
+                                <td class="normal w change_color col23 row4"></td>
+                                <td class="normal l change_color col24 row4"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row5">6</td>
+                                <td class="normal player_name_out change_color col1 row5"><a class='query_player_name'
+                                                                                             href='./player/779.html'
+                                                                                             target='_blank'>凯文-杜兰特</a>
+                                </td>
+                                <td class="normal g change_color col2 row5">849</td>
+                                <td class="normal gs change_color col3 row5">849</td>
+                                <td class="normal mp change_color col4 row5">36.9</td>
+                                <td class="normal fgper change_color col5 row5">49.3%</td>
+                                <td class="normal fg change_color col6 row5">9.2</td>
+                                <td class="normal fga change_color col7 row5">18.7</td>
+                                <td class="normal threepper change_color col8 row5">38.1%</td>
+                                <td class="normal threep change_color col9 row5">1.8</td>
+                                <td class="normal threepa change_color col10 row5">4.9</td>
+                                <td class="normal ftper change_color col11 row5">88.3%</td>
+                                <td class="normal ft change_color col12 row5">6.8</td>
+                                <td class="normal fta change_color col13 row5">7.7</td>
+                                <td class="normal trb change_color col14 row5">7.1</td>
+                                <td class="normal orb change_color col15 row5">0.7</td>
+                                <td class="normal drb change_color col16 row5">6.3</td>
+                                <td class="normal ast change_color col17 row5">4.1</td>
+                                <td class="normal stl change_color col18 row5">1.1</td>
+                                <td class="normal blk change_color col19 row5">1.1</td>
+                                <td class="normal tov change_color col20 row5">3.1</td>
+                                <td class="normal pf change_color col21 row5">1.9</td>
+                                <td class="current pts change_color col22 row5">27.0</td>
+                                <td class="normal w change_color col23 row5">528</td>
+                                <td class="normal l change_color col24 row5">321</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row6">7</td>
+                                <td class="normal player_name_out change_color col1 row6"><a class='query_player_name'
+                                                                                             href='./player/1687.html'
+                                                                                             target='_blank'>阿伦-艾弗森</a>
+                                </td>
+                                <td class="normal g change_color col2 row6">914</td>
+                                <td class="normal gs change_color col3 row6">901</td>
+                                <td class="normal mp change_color col4 row6">41.1</td>
+                                <td class="normal fgper change_color col5 row6">42.5%</td>
+                                <td class="normal fg change_color col6 row6">9.3</td>
+                                <td class="normal fga change_color col7 row6">21.8</td>
+                                <td class="normal threepper change_color col8 row6">31.3%</td>
+                                <td class="normal threep change_color col9 row6">1.2</td>
+                                <td class="normal threepa change_color col10 row6">3.7</td>
+                                <td class="normal ftper change_color col11 row6">78.0%</td>
+                                <td class="normal ft change_color col12 row6">7.0</td>
+                                <td class="normal fta change_color col13 row6">8.9</td>
+                                <td class="normal trb change_color col14 row6">3.7</td>
+                                <td class="normal orb change_color col15 row6">0.8</td>
+                                <td class="normal drb change_color col16 row6">2.9</td>
+                                <td class="normal ast change_color col17 row6">6.2</td>
+                                <td class="normal stl change_color col18 row6">2.2</td>
+                                <td class="normal blk change_color col19 row6">0.2</td>
+                                <td class="normal tov change_color col20 row6">3.6</td>
+                                <td class="normal pf change_color col21 row6">1.9</td>
+                                <td class="current pts change_color col22 row6">26.7</td>
+                                <td class="normal w change_color col23 row6">466</td>
+                                <td class="normal l change_color col24 row6">448</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row7">8</td>
+                                <td class="normal player_name_out change_color col1 row7"><a class='query_player_name'
+                                                                                             href='./player/2813.html'
+                                                                                             target='_blank'>鲍勃-佩蒂特</a>
+                                </td>
+                                <td class="normal g change_color col2 row7">792</td>
+                                <td class="normal gs change_color col3 row7"></td>
+                                <td class="normal mp change_color col4 row7">38.8</td>
+                                <td class="normal fgper change_color col5 row7">43.6%</td>
+                                <td class="normal fg change_color col6 row7">9.3</td>
+                                <td class="normal fga change_color col7 row7">21.3</td>
+                                <td class="normal threepper change_color col8 row7"></td>
+                                <td class="normal threep change_color col9 row7"></td>
+                                <td class="normal threepa change_color col10 row7"></td>
+                                <td class="normal ftper change_color col11 row7">76.1%</td>
+                                <td class="normal ft change_color col12 row7">7.8</td>
+                                <td class="normal fta change_color col13 row7">10.3</td>
+                                <td class="normal trb change_color col14 row7">16.2</td>
+                                <td class="normal orb change_color col15 row7"></td>
+                                <td class="normal drb change_color col16 row7"></td>
+                                <td class="normal ast change_color col17 row7">3.0</td>
+                                <td class="normal stl change_color col18 row7"></td>
+                                <td class="normal blk change_color col19 row7"></td>
+                                <td class="normal tov change_color col20 row7"></td>
+                                <td class="normal pf change_color col21 row7">3.2</td>
+                                <td class="current pts change_color col22 row7">26.4</td>
+                                <td class="normal w change_color col23 row7"></td>
+                                <td class="normal l change_color col24 row7"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row8">9</td>
+                                <td class="normal player_name_out change_color col1 row8"><a class='query_player_name'
+                                                                                             href='./player/1338.html'
+                                                                                             target='_blank'>乔治-格文</a>
+                                </td>
+                                <td class="normal g change_color col2 row8">791</td>
+                                <td class="normal gs change_color col3 row8"></td>
+                                <td class="normal mp change_color col4 row8">33.5</td>
+                                <td class="normal fgper change_color col5 row8">51.1%</td>
+                                <td class="normal fg change_color col6 row8">10.2</td>
+                                <td class="normal fga change_color col7 row8">19.9</td>
+                                <td class="normal threepper change_color col8 row8"></td>
+                                <td class="normal threep change_color col9 row8"></td>
+                                <td class="normal threepa change_color col10 row8"></td>
+                                <td class="normal ftper change_color col11 row8">84.4%</td>
+                                <td class="normal ft change_color col12 row8">5.7</td>
+                                <td class="normal fta change_color col13 row8">6.8</td>
+                                <td class="normal trb change_color col14 row8">4.6</td>
+                                <td class="normal orb change_color col15 row8">1.5</td>
+                                <td class="normal drb change_color col16 row8">3.1</td>
+                                <td class="normal ast change_color col17 row8">2.8</td>
+                                <td class="normal stl change_color col18 row8">1.2</td>
+                                <td class="normal blk change_color col19 row8">0.8</td>
+                                <td class="normal tov change_color col20 row8"></td>
+                                <td class="normal pf change_color col21 row8">2.9</td>
+                                <td class="current pts change_color col22 row8">26.2</td>
+                                <td class="normal w change_color col23 row8"></td>
+                                <td class="normal l change_color col24 row8"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row9">10</td>
+                                <td class="normal player_name_out change_color col1 row9"><a class='query_player_name'
+                                                                                             href='./player/3011.html'
+                                                                                             target='_blank'>奥斯卡-罗波特森</a>
+                                </td>
+                                <td class="normal g change_color col2 row9">1040</td>
+                                <td class="normal gs change_color col3 row9"></td>
+                                <td class="normal mp change_color col4 row9">42.2</td>
+                                <td class="normal fgper change_color col5 row9">48.5%</td>
+                                <td class="normal fg change_color col6 row9">9.1</td>
+                                <td class="normal fga change_color col7 row9">18.9</td>
+                                <td class="normal threepper change_color col8 row9"></td>
+                                <td class="normal threep change_color col9 row9"></td>
+                                <td class="normal threepa change_color col10 row9"></td>
+                                <td class="normal ftper change_color col11 row9">83.8%</td>
+                                <td class="normal ft change_color col12 row9">7.4</td>
+                                <td class="normal fta change_color col13 row9">8.8</td>
+                                <td class="normal trb change_color col14 row9">7.5</td>
+                                <td class="normal orb change_color col15 row9"></td>
+                                <td class="normal drb change_color col16 row9"></td>
+                                <td class="normal ast change_color col17 row9">9.5</td>
+                                <td class="normal stl change_color col18 row9"></td>
+                                <td class="normal blk change_color col19 row9"></td>
+                                <td class="normal tov change_color col20 row9"></td>
+                                <td class="normal pf change_color col21 row9">2.8</td>
+                                <td class="current pts change_color col22 row9">25.7</td>
+                                <td class="normal w change_color col23 row9"></td>
+                                <td class="normal l change_color col24 row9"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row10">11</td>
+                                <td class="normal player_name_out change_color col1 row10"><a class='query_player_name'
+                                                                                              href='./player/2545.html'
+                                                                                              target='_blank'>卡尔-马龙</a>
+                                </td>
+                                <td class="normal g change_color col2 row10">1476</td>
+                                <td class="normal gs change_color col3 row10">1471</td>
+                                <td class="normal mp change_color col4 row10">37.2</td>
+                                <td class="normal fgper change_color col5 row10">51.6%</td>
+                                <td class="normal fg change_color col6 row10">9.2</td>
+                                <td class="normal fga change_color col7 row10">17.8</td>
+                                <td class="normal threepper change_color col8 row10">27.4%</td>
+                                <td class="normal threep change_color col9 row10">0.1</td>
+                                <td class="normal threepa change_color col10 row10">0.2</td>
+                                <td class="normal ftper change_color col11 row10">74.2%</td>
+                                <td class="normal ft change_color col12 row10">6.6</td>
+                                <td class="normal fta change_color col13 row10">8.9</td>
+                                <td class="normal trb change_color col14 row10">10.1</td>
+                                <td class="normal orb change_color col15 row10">2.4</td>
+                                <td class="normal drb change_color col16 row10">7.7</td>
+                                <td class="normal ast change_color col17 row10">3.6</td>
+                                <td class="normal stl change_color col18 row10">1.4</td>
+                                <td class="normal blk change_color col19 row10">0.8</td>
+                                <td class="normal tov change_color col20 row10">3.1</td>
+                                <td class="normal pf change_color col21 row10">3.1</td>
+                                <td class="current pts change_color col22 row10">25.0</td>
+                                <td class="normal w change_color col23 row10">952</td>
+                                <td class="normal l change_color col24 row10">524</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row11">12</td>
+                                <td class="normal player_name_out change_color col1 row11"><a class='query_player_name'
+                                                                                              href='./player/195.html'
+                                                                                              target='_blank'>科比-布莱恩特</a>
+                                </td>
+                                <td class="normal g change_color col2 row11">1346</td>
+                                <td class="normal gs change_color col3 row11">1198</td>
+                                <td class="normal mp change_color col4 row11">36.1</td>
+                                <td class="normal fgper change_color col5 row11">44.7%</td>
+                                <td class="normal fg change_color col6 row11">8.7</td>
+                                <td class="normal fga change_color col7 row11">19.5</td>
+                                <td class="normal threepper change_color col8 row11">32.9%</td>
+                                <td class="normal threep change_color col9 row11">1.4</td>
+                                <td class="normal threepa change_color col10 row11">4.1</td>
+                                <td class="normal ftper change_color col11 row11">83.7%</td>
+                                <td class="normal ft change_color col12 row11">6.2</td>
+                                <td class="normal fta change_color col13 row11">7.4</td>
+                                <td class="normal trb change_color col14 row11">5.2</td>
+                                <td class="normal orb change_color col15 row11">1.1</td>
+                                <td class="normal drb change_color col16 row11">4.1</td>
+                                <td class="normal ast change_color col17 row11">4.7</td>
+                                <td class="normal stl change_color col18 row11">1.4</td>
+                                <td class="normal blk change_color col19 row11">0.5</td>
+                                <td class="normal tov change_color col20 row11">3.0</td>
+                                <td class="normal pf change_color col21 row11">2.5</td>
+                                <td class="current pts change_color col22 row11">25.0</td>
+                                <td class="normal w change_color col23 row11">836</td>
+                                <td class="normal l change_color col24 row11">510</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row12">13</td>
+                                <td class="normal player_name_out change_color col1 row12"><a class='query_player_name'
+                                                                                              href='./player/1628.html'
+                                                                                              target='_blank'>詹姆斯-哈登</a>
+                                </td>
+                                <td class="normal g change_color col2 row12">794</td>
+                                <td class="normal gs change_color col3 row12">581</td>
+                                <td class="normal mp change_color col4 row12">34.2</td>
+                                <td class="normal fgper change_color col5 row12">44.3%</td>
+                                <td class="normal fg change_color col6 row12">7.3</td>
+                                <td class="normal fga change_color col7 row12">16.5</td>
+                                <td class="normal threepper change_color col8 row12">36.5%</td>
+                                <td class="normal threep change_color col9 row12">2.7</td>
+                                <td class="normal threepa change_color col10 row12">7.5</td>
+                                <td class="normal ftper change_color col11 row12">85.9%</td>
+                                <td class="normal ft change_color col12 row12">7.5</td>
+                                <td class="normal fta change_color col13 row12">8.7</td>
+                                <td class="normal trb change_color col14 row12">5.2</td>
+                                <td class="normal orb change_color col15 row12">0.8</td>
+                                <td class="normal drb change_color col16 row12">4.5</td>
+                                <td class="normal ast change_color col17 row12">6.2</td>
+                                <td class="normal stl change_color col18 row12">1.6</td>
+                                <td class="normal blk change_color col19 row12">0.5</td>
+                                <td class="normal tov change_color col20 row12">3.7</td>
+                                <td class="normal pf change_color col21 row12">2.6</td>
+                                <td class="current pts change_color col22 row12">24.9</td>
+                                <td class="normal w change_color col23 row12">518</td>
+                                <td class="normal l change_color col24 row12">276</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row13">14</td>
+                                <td class="normal player_name_out change_color col1 row13"><a class='query_player_name'
+                                                                                              href='./player/3874.html'
+                                                                                              target='_blank'>多米尼克-威尔金斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row13">1074</td>
+                                <td class="normal gs change_color col3 row13">995</td>
+                                <td class="normal mp change_color col4 row13">35.5</td>
+                                <td class="normal fgper change_color col5 row13">46.1%</td>
+                                <td class="normal fg change_color col6 row13">9.3</td>
+                                <td class="normal fga change_color col7 row13">20.1</td>
+                                <td class="normal threepper change_color col8 row13">31.9%</td>
+                                <td class="normal threep change_color col9 row13">0.7</td>
+                                <td class="normal threepa change_color col10 row13">2.1</td>
+                                <td class="normal ftper change_color col11 row13">81.1%</td>
+                                <td class="normal ft change_color col12 row13">5.6</td>
+                                <td class="normal fta change_color col13 row13">6.9</td>
+                                <td class="normal trb change_color col14 row13">6.7</td>
+                                <td class="normal orb change_color col15 row13">2.7</td>
+                                <td class="normal drb change_color col16 row13">3.9</td>
+                                <td class="normal ast change_color col17 row13">2.5</td>
+                                <td class="normal stl change_color col18 row13">1.3</td>
+                                <td class="normal blk change_color col19 row13">0.6</td>
+                                <td class="normal tov change_color col20 row13">2.5</td>
+                                <td class="normal pf change_color col21 row13">1.9</td>
+                                <td class="current pts change_color col22 row13">24.8</td>
+                                <td class="normal w change_color col23 row13"></td>
+                                <td class="normal l change_color col24 row13"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row14">15</td>
+                                <td class="normal player_name_out change_color col1 row14"><a class='query_player_name'
+                                                                                              href='./player/136.html'
+                                                                                              target='_blank'>卡里姆-贾巴尔</a>
+                                </td>
+                                <td class="normal g change_color col2 row14">1560</td>
+                                <td class="normal gs change_color col3 row14"></td>
+                                <td class="normal mp change_color col4 row14">36.8</td>
+                                <td class="normal fgper change_color col5 row14">55.9%</td>
+                                <td class="normal fg change_color col6 row14">10.2</td>
+                                <td class="normal fga change_color col7 row14">18.1</td>
+                                <td class="normal threepper change_color col8 row14"></td>
+                                <td class="normal threep change_color col9 row14"></td>
+                                <td class="normal threepa change_color col10 row14"></td>
+                                <td class="normal ftper change_color col11 row14">72.1%</td>
+                                <td class="normal ft change_color col12 row14">4.3</td>
+                                <td class="normal fta change_color col13 row14">6.0</td>
+                                <td class="normal trb change_color col14 row14">11.2</td>
+                                <td class="normal orb change_color col15 row14"></td>
+                                <td class="normal drb change_color col16 row14"></td>
+                                <td class="normal ast change_color col17 row14">3.6</td>
+                                <td class="normal stl change_color col18 row14"></td>
+                                <td class="normal blk change_color col19 row14"></td>
+                                <td class="normal tov change_color col20 row14"></td>
+                                <td class="normal pf change_color col21 row14">3.0</td>
+                                <td class="current pts change_color col22 row14">24.6</td>
+                                <td class="normal w change_color col23 row14"></td>
+                                <td class="normal l change_color col24 row14"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row15">16</td>
+                                <td class="normal player_name_out change_color col1 row15"><a class='query_player_name'
+                                                                                              href='./player/379.html'
+                                                                                              target='_blank'>拉里·伯德</a>
+                                </td>
+                                <td class="normal g change_color col2 row15">897</td>
+                                <td class="normal gs change_color col3 row15">870</td>
+                                <td class="normal mp change_color col4 row15">38.4</td>
+                                <td class="normal fgper change_color col5 row15">49.6%</td>
+                                <td class="normal fg change_color col6 row15">9.6</td>
+                                <td class="normal fga change_color col7 row15">19.3</td>
+                                <td class="normal threepper change_color col8 row15">37.6%</td>
+                                <td class="normal threep change_color col9 row15">0.7</td>
+                                <td class="normal threepa change_color col10 row15">1.9</td>
+                                <td class="normal ftper change_color col11 row15">88.6%</td>
+                                <td class="normal ft change_color col12 row15">4.4</td>
+                                <td class="normal fta change_color col13 row15">5.0</td>
+                                <td class="normal trb change_color col14 row15">10.0</td>
+                                <td class="normal orb change_color col15 row15">2.0</td>
+                                <td class="normal drb change_color col16 row15">8.0</td>
+                                <td class="normal ast change_color col17 row15">6.3</td>
+                                <td class="normal stl change_color col18 row15">1.7</td>
+                                <td class="normal blk change_color col19 row15">0.8</td>
+                                <td class="normal tov change_color col20 row15">3.1</td>
+                                <td class="normal pf change_color col21 row15">2.5</td>
+                                <td class="current pts change_color col22 row15">24.3</td>
+                                <td class="normal w change_color col23 row15"></td>
+                                <td class="normal l change_color col24 row15"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row16">17</td>
+                                <td class="normal player_name_out change_color col1 row16"><a class='query_player_name'
+                                                                                              href='./player/956.html'
+                                                                                              target='_blank'>阿德里安-丹特利</a>
+                                </td>
+                                <td class="normal g change_color col2 row16">955</td>
+                                <td class="normal gs change_color col3 row16"></td>
+                                <td class="normal mp change_color col4 row16">35.8</td>
+                                <td class="normal fgper change_color col5 row16">54.0%</td>
+                                <td class="normal fg change_color col6 row16">8.6</td>
+                                <td class="normal fga change_color col7 row16">15.8</td>
+                                <td class="normal threepper change_color col8 row16"></td>
+                                <td class="normal threep change_color col9 row16"></td>
+                                <td class="normal threepa change_color col10 row16"></td>
+                                <td class="normal ftper change_color col11 row16">81.8%</td>
+                                <td class="normal ft change_color col12 row16">7.2</td>
+                                <td class="normal fta change_color col13 row16">8.7</td>
+                                <td class="normal trb change_color col14 row16">5.7</td>
+                                <td class="normal orb change_color col15 row16">2.3</td>
+                                <td class="normal drb change_color col16 row16">3.4</td>
+                                <td class="normal ast change_color col17 row16">3.0</td>
+                                <td class="normal stl change_color col18 row16">1.0</td>
+                                <td class="normal blk change_color col19 row16">0.2</td>
+                                <td class="normal tov change_color col20 row16"></td>
+                                <td class="normal pf change_color col21 row16">2.7</td>
+                                <td class="current pts change_color col22 row16">24.3</td>
+                                <td class="normal w change_color col23 row16"></td>
+                                <td class="normal l change_color col24 row16"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row17">18</td>
+                                <td class="normal player_name_out change_color col1 row17"><a class='query_player_name'
+                                                                                              href='./player/2531.html'
+                                                                                              target='_blank'>皮特-马拉维奇</a>
+                                </td>
+                                <td class="normal g change_color col2 row17">658</td>
+                                <td class="normal gs change_color col3 row17"></td>
+                                <td class="normal mp change_color col4 row17">37.0</td>
+                                <td class="normal fgper change_color col5 row17">44.1%</td>
+                                <td class="normal fg change_color col6 row17">9.4</td>
+                                <td class="normal fga change_color col7 row17">21.3</td>
+                                <td class="normal threepper change_color col8 row17"></td>
+                                <td class="normal threep change_color col9 row17"></td>
+                                <td class="normal threepa change_color col10 row17"></td>
+                                <td class="normal ftper change_color col11 row17">82.0%</td>
+                                <td class="normal ft change_color col12 row17">5.4</td>
+                                <td class="normal fta change_color col13 row17">6.6</td>
+                                <td class="normal trb change_color col14 row17">4.2</td>
+                                <td class="normal orb change_color col15 row17"></td>
+                                <td class="normal drb change_color col16 row17"></td>
+                                <td class="normal ast change_color col17 row17">5.4</td>
+                                <td class="normal stl change_color col18 row17"></td>
+                                <td class="normal blk change_color col19 row17"></td>
+                                <td class="normal tov change_color col20 row17"></td>
+                                <td class="normal pf change_color col21 row17">2.8</td>
+                                <td class="current pts change_color col22 row17">24.2</td>
+                                <td class="normal w change_color col23 row17"></td>
+                                <td class="normal l change_color col24 row17"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row18">19</td>
+                                <td class="normal player_name_out change_color col1 row18"><a class='query_player_name'
+                                                                                              href='./player/4464.html'
+                                                                                              target='_blank'>乔尔-恩比德</a>
+                                </td>
+                                <td class="normal g change_color col2 row18">183</td>
+                                <td class="normal gs change_color col3 row18">183</td>
+                                <td class="normal mp change_color col4 row18">30.8</td>
+                                <td class="normal fgper change_color col5 row18">47.8%</td>
+                                <td class="normal fg change_color col6 row18">8.1</td>
+                                <td class="normal fga change_color col7 row18">16.9</td>
+                                <td class="normal threepper change_color col8 row18">31.4%</td>
+                                <td class="normal threep change_color col9 row18">1.1</td>
+                                <td class="normal threepa change_color col10 row18">3.6</td>
+                                <td class="normal ftper change_color col11 row18">79.3%</td>
+                                <td class="normal ft change_color col12 row18">6.8</td>
+                                <td class="normal fta change_color col13 row18">8.6</td>
+                                <td class="normal trb change_color col14 row18">11.6</td>
+                                <td class="normal orb change_color col15 row18">2.3</td>
+                                <td class="normal drb change_color col16 row18">9.3</td>
+                                <td class="normal ast change_color col17 row18">3.2</td>
+                                <td class="normal stl change_color col18 row18">0.7</td>
+                                <td class="normal blk change_color col19 row18">1.9</td>
+                                <td class="normal tov change_color col20 row18">3.6</td>
+                                <td class="normal pf change_color col21 row18">3.4</td>
+                                <td class="current pts change_color col22 row18">24.1</td>
+                                <td class="normal w change_color col23 row18">115</td>
+                                <td class="normal l change_color col24 row18">68</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row19">20</td>
+                                <td class="normal player_name_out change_color col1 row19"><a class='query_player_name'
+                                                                                              href='./player/4076.html'
+                                                                                              target='_blank'>安东尼-戴维斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row19">494</td>
+                                <td class="normal gs change_color col3 row19">489</td>
+                                <td class="normal mp change_color col4 row19">34.6</td>
+                                <td class="normal fgper change_color col5 row19">51.6%</td>
+                                <td class="normal fg change_color col6 row19">9.0</td>
+                                <td class="normal fga change_color col7 row19">17.4</td>
+                                <td class="normal threepper change_color col8 row19">31.2%</td>
+                                <td class="normal threep change_color col9 row19">0.4</td>
+                                <td class="normal threepa change_color col10 row19">1.4</td>
+                                <td class="normal ftper change_color col11 row19">79.9%</td>
+                                <td class="normal ft change_color col12 row19">5.6</td>
+                                <td class="normal fta change_color col13 row19">7.0</td>
+                                <td class="normal trb change_color col14 row19">10.5</td>
+                                <td class="normal orb change_color col15 row19">2.6</td>
+                                <td class="normal drb change_color col16 row19">7.9</td>
+                                <td class="normal ast change_color col17 row19">2.2</td>
+                                <td class="normal stl change_color col18 row19">1.4</td>
+                                <td class="normal blk change_color col19 row19">2.4</td>
+                                <td class="normal tov change_color col20 row19">1.9</td>
+                                <td class="normal pf change_color col21 row19">2.4</td>
+                                <td class="current pts change_color col22 row19">24.0</td>
+                                <td class="normal w change_color col23 row19">239</td>
+                                <td class="normal l change_color col24 row19">255</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row20">21</td>
+                                <td class="normal player_name_out change_color col1 row20"><a class='query_player_name'
+                                                                                              href='./player/45.html'
+                                                                                              target='_blank'>卡梅罗-安东尼</a>
+                                </td>
+                                <td class="normal g change_color col2 row20">1079</td>
+                                <td class="normal gs change_color col3 row20">1071</td>
+                                <td class="normal mp change_color col4 row20">35.8</td>
+                                <td class="normal fgper change_color col5 row20">44.8%</td>
+                                <td class="normal fg change_color col6 row20">8.6</td>
+                                <td class="normal fga change_color col7 row20">19.1</td>
+                                <td class="normal threepper change_color col8 row20">34.8%</td>
+                                <td class="normal threep change_color col9 row20">1.3</td>
+                                <td class="normal threepa change_color col10 row20">3.7</td>
+                                <td class="normal ftper change_color col11 row20">81.1%</td>
+                                <td class="normal ft change_color col12 row20">5.5</td>
+                                <td class="normal fta change_color col13 row20">6.8</td>
+                                <td class="normal trb change_color col14 row20">6.5</td>
+                                <td class="normal orb change_color col15 row20">1.7</td>
+                                <td class="normal drb change_color col16 row20">4.8</td>
+                                <td class="normal ast change_color col17 row20">2.9</td>
+                                <td class="normal stl change_color col18 row20">1.0</td>
+                                <td class="normal blk change_color col19 row20">0.5</td>
+                                <td class="normal tov change_color col20 row20">2.7</td>
+                                <td class="normal pf change_color col21 row20">2.9</td>
+                                <td class="current pts change_color col22 row20">23.9</td>
+                                <td class="normal w change_color col23 row20">591</td>
+                                <td class="normal l change_color col24 row20">488</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row21">22</td>
+                                <td class="normal player_name_out change_color col1 row21"><a class='query_player_name'
+                                                                                              href='./player/2716.html'
+                                                                                              target='_blank'>沙奎尔-奥尼尔</a>
+                                </td>
+                                <td class="normal g change_color col2 row21">1207</td>
+                                <td class="normal gs change_color col3 row21">1197</td>
+                                <td class="normal mp change_color col4 row21">34.7</td>
+                                <td class="normal fgper change_color col5 row21">58.2%</td>
+                                <td class="normal fg change_color col6 row21">9.4</td>
+                                <td class="normal fga change_color col7 row21">16.1</td>
+                                <td class="normal threepper change_color col8 row21">4.5%</td>
+                                <td class="normal threep change_color col9 row21">0.0</td>
+                                <td class="normal threepa change_color col10 row21">0.0</td>
+                                <td class="normal ftper change_color col11 row21">52.7%</td>
+                                <td class="normal ft change_color col12 row21">4.9</td>
+                                <td class="normal fta change_color col13 row21">9.3</td>
+                                <td class="normal trb change_color col14 row21">10.9</td>
+                                <td class="normal orb change_color col15 row21">3.5</td>
+                                <td class="normal drb change_color col16 row21">7.4</td>
+                                <td class="normal ast change_color col17 row21">2.5</td>
+                                <td class="normal stl change_color col18 row21">0.6</td>
+                                <td class="normal blk change_color col19 row21">2.3</td>
+                                <td class="normal tov change_color col20 row21">2.7</td>
+                                <td class="normal pf change_color col21 row21">3.4</td>
+                                <td class="current pts change_color col22 row21">23.7</td>
+                                <td class="normal w change_color col23 row21">819</td>
+                                <td class="normal l change_color col24 row21">388</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row22">23</td>
+                                <td class="normal player_name_out change_color col1 row22"><a class='query_player_name'
+                                                                                              href='./player/4089.html'
+                                                                                              target='_blank'>达米安-利拉德</a>
+                                </td>
+                                <td class="normal g change_color col2 row22">577</td>
+                                <td class="normal gs change_color col3 row22">577</td>
+                                <td class="normal mp change_color col4 row22">36.3</td>
+                                <td class="normal fgper change_color col5 row22">43.4%</td>
+                                <td class="normal fg change_color col6 row22">7.8</td>
+                                <td class="normal fga change_color col7 row22">18.0</td>
+                                <td class="normal threepper change_color col8 row22">36.8%</td>
+                                <td class="normal threep change_color col9 row22">2.8</td>
+                                <td class="normal threepa change_color col10 row22">7.5</td>
+                                <td class="normal ftper change_color col11 row22">88.9%</td>
+                                <td class="normal ft change_color col12 row22">5.3</td>
+                                <td class="normal fta change_color col13 row22">5.9</td>
+                                <td class="normal trb change_color col14 row22">4.2</td>
+                                <td class="normal orb change_color col15 row22">0.6</td>
+                                <td class="normal drb change_color col16 row22">3.5</td>
+                                <td class="normal ast change_color col17 row22">6.4</td>
+                                <td class="normal stl change_color col18 row22">1.0</td>
+                                <td class="normal blk change_color col19 row22">0.3</td>
+                                <td class="normal tov change_color col20 row22">2.8</td>
+                                <td class="normal pf change_color col21 row22">2.0</td>
+                                <td class="current pts change_color col22 row22">23.7</td>
+                                <td class="normal w change_color col23 row22">325</td>
+                                <td class="normal l change_color col24 row22">252</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row23">24</td>
+                                <td class="normal player_name_out change_color col1 row23"><a class='query_player_name'
+                                                                                              href='./player/526.html'
+                                                                                              target='_blank'>斯蒂芬-库里</a>
+                                </td>
+                                <td class="normal g change_color col2 row23">698</td>
+                                <td class="normal gs change_color col3 row23">692</td>
+                                <td class="normal mp change_color col4 row23">34.3</td>
+                                <td class="normal fgper change_color col5 row23">47.6%</td>
+                                <td class="normal fg change_color col6 row23">8.1</td>
+                                <td class="normal fga change_color col7 row23">17.1</td>
+                                <td class="normal threepper change_color col8 row23">43.5%</td>
+                                <td class="normal threep change_color col9 row23">3.6</td>
+                                <td class="normal threepa change_color col10 row23">8.2</td>
+                                <td class="normal ftper change_color col11 row23">90.5%</td>
+                                <td class="normal ft change_color col12 row23">3.7</td>
+                                <td class="normal fta change_color col13 row23">4.0</td>
+                                <td class="normal trb change_color col14 row23">4.5</td>
+                                <td class="normal orb change_color col15 row23">0.7</td>
+                                <td class="normal drb change_color col16 row23">3.8</td>
+                                <td class="normal ast change_color col17 row23">6.6</td>
+                                <td class="normal stl change_color col18 row23">1.7</td>
+                                <td class="normal blk change_color col19 row23">0.2</td>
+                                <td class="normal tov change_color col20 row23">3.1</td>
+                                <td class="normal pf change_color col21 row23">2.5</td>
+                                <td class="current pts change_color col22 row23">23.5</td>
+                                <td class="normal w change_color col23 row23">463</td>
+                                <td class="normal l change_color col24 row23">235</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row24">25</td>
+                                <td class="normal player_name_out change_color col1 row24"><a class='query_player_name'
+                                                                                              href='./player/4683.html'
+                                                                                              target='_blank'>卢卡-东契奇</a>
+                                </td>
+                                <td class="normal g change_color col2 row24">97</td>
+                                <td class="normal gs change_color col3 row24">97</td>
+                                <td class="normal mp change_color col4 row24">32.3</td>
+                                <td class="normal fgper change_color col5 row24">44.3%</td>
+                                <td class="normal fg change_color col6 row24">7.6</td>
+                                <td class="normal fga change_color col7 row24">17.3</td>
+                                <td class="normal threepper change_color col8 row24">32.7%</td>
+                                <td class="normal threep change_color col9 row24">2.5</td>
+                                <td class="normal threepa change_color col10 row24">7.7</td>
+                                <td class="normal ftper change_color col11 row24">74.2%</td>
+                                <td class="normal ft change_color col12 row24">5.5</td>
+                                <td class="normal fta change_color col13 row24">7.4</td>
+                                <td class="normal trb change_color col14 row24">8.3</td>
+                                <td class="normal orb change_color col15 row24">1.2</td>
+                                <td class="normal drb change_color col16 row24">7.1</td>
+                                <td class="normal ast change_color col17 row24">6.7</td>
+                                <td class="normal stl change_color col18 row24">1.1</td>
+                                <td class="normal blk change_color col19 row24">0.3</td>
+                                <td class="normal tov change_color col20 row24">3.7</td>
+                                <td class="normal pf change_color col21 row24">2.0</td>
+                                <td class="current pts change_color col22 row24">23.3</td>
+                                <td class="normal w change_color col23 row24">45</td>
+                                <td class="normal l change_color col24 row24">52</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row25">26</td>
+                                <td class="normal player_name_out change_color col1 row25"><a class='query_player_name'
+                                                                                              href='./player/467.html'
+                                                                                              target='_blank'>里克-巴里</a>
+                                </td>
+                                <td class="normal g change_color col2 row25">794</td>
+                                <td class="normal gs change_color col3 row25"></td>
+                                <td class="normal mp change_color col4 row25">36.3</td>
+                                <td class="normal fgper change_color col5 row25">44.9%</td>
+                                <td class="normal fg change_color col6 row25">9.1</td>
+                                <td class="normal fga change_color col7 row25">20.4</td>
+                                <td class="normal threepper change_color col8 row25"></td>
+                                <td class="normal threep change_color col9 row25"></td>
+                                <td class="normal threepa change_color col10 row25"></td>
+                                <td class="normal ftper change_color col11 row25">90.0%</td>
+                                <td class="normal ft change_color col12 row25">4.8</td>
+                                <td class="normal fta change_color col13 row25">5.3</td>
+                                <td class="normal trb change_color col14 row25">6.5</td>
+                                <td class="normal orb change_color col15 row25"></td>
+                                <td class="normal drb change_color col16 row25"></td>
+                                <td class="normal ast change_color col17 row25">5.1</td>
+                                <td class="normal stl change_color col18 row25"></td>
+                                <td class="normal blk change_color col19 row25"></td>
+                                <td class="normal tov change_color col20 row25"></td>
+                                <td class="normal pf change_color col21 row25">2.9</td>
+                                <td class="current pts change_color col22 row25">23.2</td>
+                                <td class="normal w change_color col23 row25"></td>
+                                <td class="normal l change_color col24 row25"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row26">27</td>
+                                <td class="normal player_name_out change_color col1 row26"><a class='query_player_name'
+                                                                                              href='./player/2346.html'
+                                                                                              target='_blank'>乔治-迈肯</a>
+                                </td>
+                                <td class="normal g change_color col2 row26">439</td>
+                                <td class="normal gs change_color col3 row26"></td>
+                                <td class="normal mp change_color col4 row26"></td>
+                                <td class="normal fgper change_color col5 row26">40.4%</td>
+                                <td class="normal fg change_color col6 row26">8.1</td>
+                                <td class="normal fga change_color col7 row26">20.0</td>
+                                <td class="normal threepper change_color col8 row26"></td>
+                                <td class="normal threep change_color col9 row26"></td>
+                                <td class="normal threepa change_color col10 row26"></td>
+                                <td class="normal ftper change_color col11 row26">78.2%</td>
+                                <td class="normal ft change_color col12 row26">7.0</td>
+                                <td class="normal fta change_color col13 row26">8.9</td>
+                                <td class="normal trb change_color col14 row26"></td>
+                                <td class="normal orb change_color col15 row26"></td>
+                                <td class="normal drb change_color col16 row26"></td>
+                                <td class="normal ast change_color col17 row26">2.8</td>
+                                <td class="normal stl change_color col18 row26"></td>
+                                <td class="normal blk change_color col19 row26"></td>
+                                <td class="normal tov change_color col20 row26"></td>
+                                <td class="normal pf change_color col21 row26">4.2</td>
+                                <td class="current pts change_color col22 row26">23.1</td>
+                                <td class="normal w change_color col23 row26"></td>
+                                <td class="normal l change_color col24 row26"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row27">28</td>
+                                <td class="normal player_name_out change_color col1 row27"><a class='query_player_name'
+                                                                                              href='./player/3920.html'
+                                                                                              target='_blank'>拉塞尔-威斯布鲁克</a>
+                                </td>
+                                <td class="normal g change_color col2 row27">847</td>
+                                <td class="normal gs change_color col3 row27">830</td>
+                                <td class="normal mp change_color col4 row27">34.5</td>
+                                <td class="normal fgper change_color col5 row27">43.4%</td>
+                                <td class="normal fg change_color col6 row27">8.1</td>
+                                <td class="normal fga change_color col7 row27">18.6</td>
+                                <td class="normal threepper change_color col8 row27">30.5%</td>
+                                <td class="normal threep change_color col9 row27">1.1</td>
+                                <td class="normal threepa change_color col10 row27">3.7</td>
+                                <td class="normal ftper change_color col11 row27">80.1%</td>
+                                <td class="normal ft change_color col12 row27">5.7</td>
+                                <td class="normal fta change_color col13 row27">7.1</td>
+                                <td class="normal trb change_color col14 row27">7.0</td>
+                                <td class="normal orb change_color col15 row27">1.7</td>
+                                <td class="normal drb change_color col16 row27">5.4</td>
+                                <td class="normal ast change_color col17 row27">8.4</td>
+                                <td class="normal stl change_color col18 row27">1.8</td>
+                                <td class="normal blk change_color col19 row27">0.3</td>
+                                <td class="normal tov change_color col20 row27">4.1</td>
+                                <td class="normal pf change_color col21 row27">2.5</td>
+                                <td class="current pts change_color col22 row27">23.0</td>
+                                <td class="normal w change_color col23 row27">519</td>
+                                <td class="normal l change_color col24 row27">328</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row28">29</td>
+                                <td class="normal player_name_out change_color col1 row28"><a class='query_player_name'
+                                                                                              href='./player/35.html'
+                                                                                              target='_blank'>保罗-阿里金</a>
+                                </td>
+                                <td class="normal g change_color col2 row28">713</td>
+                                <td class="normal gs change_color col3 row28"></td>
+                                <td class="normal mp change_color col4 row28"></td>
+                                <td class="normal fgper change_color col5 row28">42.1%</td>
+                                <td class="normal fg change_color col6 row28">7.9</td>
+                                <td class="normal fga change_color col7 row28">18.7</td>
+                                <td class="normal threepper change_color col8 row28"></td>
+                                <td class="normal threep change_color col9 row28"></td>
+                                <td class="normal threepa change_color col10 row28"></td>
+                                <td class="normal ftper change_color col11 row28">81.0%</td>
+                                <td class="normal ft change_color col12 row28">7.0</td>
+                                <td class="normal fta change_color col13 row28">8.7</td>
+                                <td class="normal trb change_color col14 row28">8.6</td>
+                                <td class="normal orb change_color col15 row28"></td>
+                                <td class="normal drb change_color col16 row28"></td>
+                                <td class="normal ast change_color col17 row28">2.3</td>
+                                <td class="normal stl change_color col18 row28"></td>
+                                <td class="normal blk change_color col19 row28"></td>
+                                <td class="normal tov change_color col20 row28"></td>
+                                <td class="normal pf change_color col21 row28">3.9</td>
+                                <td class="current pts change_color col22 row28">22.8</td>
+                                <td class="normal w change_color col23 row28"></td>
+                                <td class="normal l change_color col24 row28"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row29">30</td>
+                                <td class="normal player_name_out change_color col1 row29"><a class='query_player_name'
+                                                                                              href='./player/4548.html'
+                                                                                              target='_blank'>多诺万-米切尔</a>
+                                </td>
+                                <td class="normal g change_color col2 row29">185</td>
+                                <td class="normal gs change_color col3 row29">177</td>
+                                <td class="normal mp change_color col4 row29">33.8</td>
+                                <td class="normal fgper change_color col5 row29">43.8%</td>
+                                <td class="normal fg change_color col6 row29">8.3</td>
+                                <td class="normal fga change_color col7 row29">18.9</td>
+                                <td class="normal threepper change_color col8 row29">35.1%</td>
+                                <td class="normal threep change_color col9 row29">2.4</td>
+                                <td class="normal threepa change_color col10 row29">6.7</td>
+                                <td class="normal ftper change_color col11 row29">81.3%</td>
+                                <td class="normal ft change_color col12 row29">3.7</td>
+                                <td class="normal fta change_color col13 row29">4.5</td>
+                                <td class="normal trb change_color col14 row29">4.0</td>
+                                <td class="normal orb change_color col15 row29">0.7</td>
+                                <td class="normal drb change_color col16 row29">3.3</td>
+                                <td class="normal ast change_color col17 row29">3.9</td>
+                                <td class="normal stl change_color col18 row29">1.4</td>
+                                <td class="normal blk change_color col19 row29">0.4</td>
+                                <td class="normal tov change_color col20 row29">2.7</td>
+                                <td class="normal pf change_color col21 row29">2.6</td>
+                                <td class="current pts change_color col22 row29">22.6</td>
+                                <td class="normal w change_color col23 row29">113</td>
+                                <td class="normal l change_color col24 row29">72</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row30">31</td>
+                                <td class="normal player_name_out change_color col1 row30"><a class='query_player_name'
+                                                                                              href='./player/4391.html'
+                                                                                              target='_blank'>卡尔-安东尼-唐斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row30">346</td>
+                                <td class="normal gs change_color col3 row30">346</td>
+                                <td class="normal mp change_color col4 row30">34.4</td>
+                                <td class="normal fgper change_color col5 row30">53.5%</td>
+                                <td class="normal fg change_color col6 row30">8.5</td>
+                                <td class="normal fga change_color col7 row30">16.0</td>
+                                <td class="normal threepper change_color col8 row30">39.6%</td>
+                                <td class="normal threep change_color col9 row30">1.4</td>
+                                <td class="normal threepa change_color col10 row30">3.5</td>
+                                <td class="normal ftper change_color col11 row30">83.3%</td>
+                                <td class="normal ft change_color col12 row30">4.1</td>
+                                <td class="normal fta change_color col13 row30">4.9</td>
+                                <td class="normal trb change_color col14 row30">11.9</td>
+                                <td class="normal orb change_color col15 row30">3.1</td>
+                                <td class="normal drb change_color col16 row30">8.7</td>
+                                <td class="normal ast change_color col17 row30">2.7</td>
+                                <td class="normal stl change_color col18 row30">0.8</td>
+                                <td class="normal blk change_color col19 row30">1.5</td>
+                                <td class="normal tov change_color col20 row30">2.5</td>
+                                <td class="normal pf change_color col21 row30">3.3</td>
+                                <td class="current pts change_color col22 row30">22.5</td>
+                                <td class="normal w change_color col23 row30">150</td>
+                                <td class="normal l change_color col24 row30">196</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row31">32</td>
+                                <td class="normal player_name_out change_color col1 row31"><a class='query_player_name'
+                                                                                              href='./player/1202.html'
+                                                                                              target='_blank'>艾利克斯-戈洛加</a>
+                                </td>
+                                <td class="normal g change_color col2 row31">130</td>
+                                <td class="normal gs change_color col3 row31"></td>
+                                <td class="normal mp change_color col4 row31"></td>
+                                <td class="normal fgper change_color col5 row31">47.4%</td>
+                                <td class="normal fg change_color col6 row31">7.8</td>
+                                <td class="normal fga change_color col7 row31">16.4</td>
+                                <td class="normal threepper change_color col8 row31"></td>
+                                <td class="normal threep change_color col9 row31"></td>
+                                <td class="normal threepa change_color col10 row31"></td>
+                                <td class="normal ftper change_color col11 row31">75.6%</td>
+                                <td class="normal ft change_color col12 row31">6.9</td>
+                                <td class="normal fta change_color col13 row31">9.1</td>
+                                <td class="normal trb change_color col14 row31"></td>
+                                <td class="normal orb change_color col15 row31"></td>
+                                <td class="normal drb change_color col16 row31"></td>
+                                <td class="normal ast change_color col17 row31">2.4</td>
+                                <td class="normal stl change_color col18 row31"></td>
+                                <td class="normal blk change_color col19 row31"></td>
+                                <td class="normal tov change_color col20 row31"></td>
+                                <td class="normal pf change_color col21 row31">3.5</td>
+                                <td class="current pts change_color col22 row31">22.5</td>
+                                <td class="normal w change_color col23 row31"></td>
+                                <td class="normal l change_color col24 row31"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row32">33</td>
+                                <td class="normal player_name_out change_color col1 row32"><a class='query_player_name'
+                                                                                              href='./player/1986.html'
+                                                                                              target='_blank'>伯纳德-金</a>
+                                </td>
+                                <td class="normal g change_color col2 row32">874</td>
+                                <td class="normal gs change_color col3 row32"></td>
+                                <td class="normal mp change_color col4 row32">33.7</td>
+                                <td class="normal fgper change_color col5 row32">51.8%</td>
+                                <td class="normal fg change_color col6 row32">9.0</td>
+                                <td class="normal fga change_color col7 row32">17.3</td>
+                                <td class="normal threepper change_color col8 row32"></td>
+                                <td class="normal threep change_color col9 row32"></td>
+                                <td class="normal threepa change_color col10 row32"></td>
+                                <td class="normal ftper change_color col11 row32">73.0%</td>
+                                <td class="normal ft change_color col12 row32">4.5</td>
+                                <td class="normal fta change_color col13 row32">6.2</td>
+                                <td class="normal trb change_color col14 row32">5.8</td>
+                                <td class="normal orb change_color col15 row32">1.9</td>
+                                <td class="normal drb change_color col16 row32">3.8</td>
+                                <td class="normal ast change_color col17 row32">3.3</td>
+                                <td class="normal stl change_color col18 row32">1.0</td>
+                                <td class="normal blk change_color col19 row32">0.3</td>
+                                <td class="normal tov change_color col20 row32">3.2</td>
+                                <td class="normal pf change_color col21 row32">3.3</td>
+                                <td class="current pts change_color col22 row32">22.5</td>
+                                <td class="normal w change_color col23 row32"></td>
+                                <td class="normal l change_color col24 row32"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row33">34</td>
+                                <td class="normal player_name_out change_color col1 row33"><a class='query_player_name'
+                                                                                              href='./player/1690.html'
+                                                                                              target='_blank'>凯里-欧文</a>
+                                </td>
+                                <td class="normal g change_color col2 row33">519</td>
+                                <td class="normal gs change_color col3 row33">519</td>
+                                <td class="normal mp change_color col4 row33">33.8</td>
+                                <td class="normal fgper change_color col5 row33">46.5%</td>
+                                <td class="normal fg change_color col6 row33">8.2</td>
+                                <td class="normal fga change_color col7 row33">17.7</td>
+                                <td class="normal threepper change_color col8 row33">38.8%</td>
+                                <td class="normal threep change_color col9 row33">2.1</td>
+                                <td class="normal threepa change_color col10 row33">5.4</td>
+                                <td class="normal ftper change_color col11 row33">87.7%</td>
+                                <td class="normal ft change_color col12 row33">3.8</td>
+                                <td class="normal fta change_color col13 row33">4.4</td>
+                                <td class="normal trb change_color col14 row33">3.7</td>
+                                <td class="normal orb change_color col15 row33">0.8</td>
+                                <td class="normal drb change_color col16 row33">2.9</td>
+                                <td class="normal ast change_color col17 row33">5.7</td>
+                                <td class="normal stl change_color col18 row33">1.3</td>
+                                <td class="normal blk change_color col19 row33">0.4</td>
+                                <td class="normal tov change_color col20 row33">2.6</td>
+                                <td class="normal pf change_color col21 row33">2.2</td>
+                                <td class="current pts change_color col22 row33">22.4</td>
+                                <td class="normal w change_color col23 row33">282</td>
+                                <td class="normal l change_color col24 row33">237</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row34">35</td>
+                                <td class="normal player_name_out change_color col1 row34"><a class='query_player_name'
+                                                                                              href='./player/491.html'
+                                                                                              target='_blank'>查尔斯-巴克利</a>
+                                </td>
+                                <td class="normal g change_color col2 row34">1073</td>
+                                <td class="normal gs change_color col3 row34">1012</td>
+                                <td class="normal mp change_color col4 row34">36.7</td>
+                                <td class="normal fgper change_color col5 row34">54.1%</td>
+                                <td class="normal fg change_color col6 row34">7.9</td>
+                                <td class="normal fga change_color col7 row34">14.5</td>
+                                <td class="normal threepper change_color col8 row34">26.6%</td>
+                                <td class="normal threep change_color col9 row34">0.5</td>
+                                <td class="normal threepa change_color col10 row34">1.9</td>
+                                <td class="normal ftper change_color col11 row34">73.5%</td>
+                                <td class="normal ft change_color col12 row34">5.9</td>
+                                <td class="normal fta change_color col13 row34">8.1</td>
+                                <td class="normal trb change_color col14 row34">11.7</td>
+                                <td class="normal orb change_color col15 row34">4.0</td>
+                                <td class="normal drb change_color col16 row34">7.7</td>
+                                <td class="normal ast change_color col17 row34">3.9</td>
+                                <td class="normal stl change_color col18 row34">1.5</td>
+                                <td class="normal blk change_color col19 row34">0.8</td>
+                                <td class="normal tov change_color col20 row34">3.1</td>
+                                <td class="normal pf change_color col21 row34">3.1</td>
+                                <td class="current pts change_color col22 row34">22.1</td>
+                                <td class="normal w change_color col23 row34"></td>
+                                <td class="normal l change_color col24 row34"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row35">36</td>
+                                <td class="normal player_name_out change_color col1 row35"><a class='query_player_name'
+                                                                                              href='./player/3594.html'
+                                                                                              target='_blank'>大卫-汤普森</a>
+                                </td>
+                                <td class="normal g change_color col2 row35">509</td>
+                                <td class="normal gs change_color col3 row35"></td>
+                                <td class="normal mp change_color col4 row35">32.0</td>
+                                <td class="normal fgper change_color col5 row35">50.4%</td>
+                                <td class="normal fg change_color col6 row35">8.3</td>
+                                <td class="normal fga change_color col7 row35">16.4</td>
+                                <td class="normal threepper change_color col8 row35"></td>
+                                <td class="normal threep change_color col9 row35"></td>
+                                <td class="normal threepa change_color col10 row35"></td>
+                                <td class="normal ftper change_color col11 row35">77.8%</td>
+                                <td class="normal ft change_color col12 row35">5.5</td>
+                                <td class="normal fta change_color col13 row35">7.1</td>
+                                <td class="normal trb change_color col14 row35">3.8</td>
+                                <td class="normal orb change_color col15 row35">1.4</td>
+                                <td class="normal drb change_color col16 row35">2.3</td>
+                                <td class="normal ast change_color col17 row35">3.2</td>
+                                <td class="normal stl change_color col18 row35">0.9</td>
+                                <td class="normal blk change_color col19 row35">0.8</td>
+                                <td class="normal tov change_color col20 row35"></td>
+                                <td class="normal pf change_color col21 row35">2.5</td>
+                                <td class="current pts change_color col22 row35">22.1</td>
+                                <td class="normal w change_color col23 row35"></td>
+                                <td class="normal l change_color col24 row35"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row36">37</td>
+                                <td class="normal player_name_out change_color col1 row36"><a class='query_player_name'
+                                                                                              href='./player/2468.html'
+                                                                                              target='_blank'>鲍伯-麦克阿杜</a>
+                                </td>
+                                <td class="normal g change_color col2 row36">852</td>
+                                <td class="normal gs change_color col3 row36"></td>
+                                <td class="normal mp change_color col4 row36">33.2</td>
+                                <td class="normal fgper change_color col5 row36">50.3%</td>
+                                <td class="normal fg change_color col6 row36">8.7</td>
+                                <td class="normal fga change_color col7 row36">17.3</td>
+                                <td class="normal threepper change_color col8 row36"></td>
+                                <td class="normal threep change_color col9 row36"></td>
+                                <td class="normal threepa change_color col10 row36"></td>
+                                <td class="normal ftper change_color col11 row36">75.4%</td>
+                                <td class="normal ft change_color col12 row36">4.6</td>
+                                <td class="normal fta change_color col13 row36">6.1</td>
+                                <td class="normal trb change_color col14 row36">9.4</td>
+                                <td class="normal orb change_color col15 row36"></td>
+                                <td class="normal drb change_color col16 row36"></td>
+                                <td class="normal ast change_color col17 row36">2.3</td>
+                                <td class="normal stl change_color col18 row36"></td>
+                                <td class="normal blk change_color col19 row36"></td>
+                                <td class="normal tov change_color col20 row36"></td>
+                                <td class="normal pf change_color col21 row36">3.2</td>
+                                <td class="current pts change_color col22 row36">22.1</td>
+                                <td class="normal w change_color col23 row36"></td>
+                                <td class="normal l change_color col24 row36"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row37">38</td>
+                                <td class="normal player_name_out change_color col1 row37"><a class='query_player_name'
+                                                                                              href='./player/4034.html'
+                                                                                              target='_blank'>德维恩-韦德</a>
+                                </td>
+                                <td class="normal g change_color col2 row37">1054</td>
+                                <td class="normal gs change_color col3 row37">909</td>
+                                <td class="normal mp change_color col4 row37">33.9</td>
+                                <td class="normal fgper change_color col5 row37">48.0%</td>
+                                <td class="normal fg change_color col6 row37">8.0</td>
+                                <td class="normal fga change_color col7 row37">16.7</td>
+                                <td class="normal threepper change_color col8 row37">29.3%</td>
+                                <td class="normal threep change_color col9 row37">0.5</td>
+                                <td class="normal threepa change_color col10 row37">1.8</td>
+                                <td class="normal ftper change_color col11 row37">76.5%</td>
+                                <td class="normal ft change_color col12 row37">5.4</td>
+                                <td class="normal fta change_color col13 row37">7.1</td>
+                                <td class="normal trb change_color col14 row37">4.7</td>
+                                <td class="normal orb change_color col15 row37">1.2</td>
+                                <td class="normal drb change_color col16 row37">3.5</td>
+                                <td class="normal ast change_color col17 row37">5.4</td>
+                                <td class="normal stl change_color col18 row37">1.5</td>
+                                <td class="normal blk change_color col19 row37">0.8</td>
+                                <td class="normal tov change_color col20 row37">3.2</td>
+                                <td class="normal pf change_color col21 row37">2.2</td>
+                                <td class="current pts change_color col22 row37">22.0</td>
+                                <td class="normal w change_color col23 row37">611</td>
+                                <td class="normal l change_color col24 row37">443</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row38">39</td>
+                                <td class="normal player_name_out change_color col1 row38"><a class='query_player_name'
+                                                                                              href='./player/989.html'
+                                                                                              target='_blank'>朱利叶斯-欧文</a>
+                                </td>
+                                <td class="normal g change_color col2 row38">836</td>
+                                <td class="normal gs change_color col3 row38"></td>
+                                <td class="normal mp change_color col4 row38">34.3</td>
+                                <td class="normal fgper change_color col5 row38">50.7%</td>
+                                <td class="normal fg change_color col6 row38">8.7</td>
+                                <td class="normal fga change_color col7 row38">17.1</td>
+                                <td class="normal threepper change_color col8 row38"></td>
+                                <td class="normal threep change_color col9 row38"></td>
+                                <td class="normal threepa change_color col10 row38"></td>
+                                <td class="normal ftper change_color col11 row38">77.7%</td>
+                                <td class="normal ft change_color col12 row38">4.6</td>
+                                <td class="normal fta change_color col13 row38">5.9</td>
+                                <td class="normal trb change_color col14 row38">6.7</td>
+                                <td class="normal orb change_color col15 row38">2.5</td>
+                                <td class="normal drb change_color col16 row38">4.2</td>
+                                <td class="normal ast change_color col17 row38">3.9</td>
+                                <td class="normal stl change_color col18 row38">1.8</td>
+                                <td class="normal blk change_color col19 row38">1.5</td>
+                                <td class="normal tov change_color col20 row38"></td>
+                                <td class="normal pf change_color col21 row38">2.7</td>
+                                <td class="current pts change_color col22 row38">22.0</td>
+                                <td class="normal w change_color col23 row38"></td>
+                                <td class="normal l change_color col24 row38"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row39">40</td>
+                                <td class="normal player_name_out change_color col1 row39"><a class='query_player_name'
+                                                                                              href='./player/2817.html'
+                                                                                              target='_blank'>乔夫-皮特里</a>
+                                </td>
+                                <td class="normal g change_color col2 row39">446</td>
+                                <td class="normal gs change_color col3 row39"></td>
+                                <td class="normal mp change_color col4 row39">37.6</td>
+                                <td class="normal fgper change_color col5 row39">45.5%</td>
+                                <td class="normal fg change_color col6 row39">8.9</td>
+                                <td class="normal fga change_color col7 row39">19.5</td>
+                                <td class="normal threepper change_color col8 row39"></td>
+                                <td class="normal threep change_color col9 row39"></td>
+                                <td class="normal threepa change_color col10 row39"></td>
+                                <td class="normal ftper change_color col11 row39">80.5%</td>
+                                <td class="normal ft change_color col12 row39">4.0</td>
+                                <td class="normal fta change_color col13 row39">5.0</td>
+                                <td class="normal trb change_color col14 row39">2.8</td>
+                                <td class="normal orb change_color col15 row39"></td>
+                                <td class="normal drb change_color col16 row39"></td>
+                                <td class="normal ast change_color col17 row39">4.6</td>
+                                <td class="normal stl change_color col18 row39"></td>
+                                <td class="normal blk change_color col19 row39"></td>
+                                <td class="normal tov change_color col20 row39"></td>
+                                <td class="normal pf change_color col21 row39">2.4</td>
+                                <td class="current pts change_color col22 row39">21.8</td>
+                                <td class="normal w change_color col23 row39"></td>
+                                <td class="normal l change_color col24 row39"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row40">41</td>
+                                <td class="normal player_name_out change_color col1 row40"><a class='query_player_name'
+                                                                                              href='./player/2701.html'
+                                                                                              target='_blank'>哈基姆-奥拉朱旺</a>
+                                </td>
+                                <td class="normal g change_color col2 row40">1238</td>
+                                <td class="normal gs change_color col3 row40">1186</td>
+                                <td class="normal mp change_color col4 row40">35.7</td>
+                                <td class="normal fgper change_color col5 row40">51.2%</td>
+                                <td class="normal fg change_color col6 row40">8.7</td>
+                                <td class="normal fga change_color col7 row40">17.0</td>
+                                <td class="normal threepper change_color col8 row40">20.2%</td>
+                                <td class="normal threep change_color col9 row40">0.0</td>
+                                <td class="normal threepa change_color col10 row40">0.1</td>
+                                <td class="normal ftper change_color col11 row40">71.2%</td>
+                                <td class="normal ft change_color col12 row40">4.4</td>
+                                <td class="normal fta change_color col13 row40">6.2</td>
+                                <td class="normal trb change_color col14 row40">11.1</td>
+                                <td class="normal orb change_color col15 row40">3.3</td>
+                                <td class="normal drb change_color col16 row40">7.8</td>
+                                <td class="normal ast change_color col17 row40">2.5</td>
+                                <td class="normal stl change_color col18 row40">1.7</td>
+                                <td class="normal blk change_color col19 row40">3.1</td>
+                                <td class="normal tov change_color col20 row40">3.0</td>
+                                <td class="normal pf change_color col21 row40">3.5</td>
+                                <td class="current pts change_color col22 row40">21.8</td>
+                                <td class="normal w change_color col23 row40"></td>
+                                <td class="normal l change_color col24 row40"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row41">42</td>
+                                <td class="normal player_name_out change_color col1 row41"><a class='query_player_name'
+                                                                                              href='./player/4667.html'
+                                                                                              target='_blank'>特雷-杨</a>
+                                </td>
+                                <td class="normal g change_color col2 row41">110</td>
+                                <td class="normal gs change_color col3 row41">110</td>
+                                <td class="normal mp change_color col4 row41">32.1</td>
+                                <td class="normal fgper change_color col5 row41">42.7%</td>
+                                <td class="normal fg change_color col6 row41">7.3</td>
+                                <td class="normal fga change_color col7 row41">17.1</td>
+                                <td class="normal threepper change_color col8 row41">33.9%</td>
+                                <td class="normal threep change_color col9 row41">2.3</td>
+                                <td class="normal threepa change_color col10 row41">6.8</td>
+                                <td class="normal ftper change_color col11 row41">83.7%</td>
+                                <td class="normal ft change_color col12 row41">4.8</td>
+                                <td class="normal fta change_color col13 row41">5.8</td>
+                                <td class="normal trb change_color col14 row41">3.9</td>
+                                <td class="normal orb change_color col15 row41">0.7</td>
+                                <td class="normal drb change_color col16 row41">3.2</td>
+                                <td class="normal ast change_color col17 row41">8.2</td>
+                                <td class="normal stl change_color col18 row41">1.0</td>
+                                <td class="normal blk change_color col19 row41">0.2</td>
+                                <td class="normal tov change_color col20 row41">4.0</td>
+                                <td class="normal pf change_color col21 row41">1.7</td>
+                                <td class="current pts change_color col22 row41">21.7</td>
+                                <td class="normal w change_color col23 row41">35</td>
+                                <td class="normal l change_color col24 row41">75</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row42">43</td>
+                                <td class="normal player_name_out change_color col1 row42"><a class='query_player_name'
+                                                                                              href='./player/1215.html'
+                                                                                              target='_blank'>布雷克-格里芬</a>
+                                </td>
+                                <td class="normal g change_color col2 row42">619</td>
+                                <td class="normal gs change_color col3 row42">619</td>
+                                <td class="normal mp change_color col4 row42">34.9</td>
+                                <td class="normal fgper change_color col5 row42">49.9%</td>
+                                <td class="normal fg change_color col6 row42">8.1</td>
+                                <td class="normal fga change_color col7 row42">16.3</td>
+                                <td class="normal threepper change_color col8 row42">33.6%</td>
+                                <td class="normal threep change_color col9 row42">0.7</td>
+                                <td class="normal threepa change_color col10 row42">1.9</td>
+                                <td class="normal ftper change_color col11 row42">69.4%</td>
+                                <td class="normal ft change_color col12 row42">4.8</td>
+                                <td class="normal fta change_color col13 row42">6.9</td>
+                                <td class="normal trb change_color col14 row42">8.9</td>
+                                <td class="normal orb change_color col15 row42">2.2</td>
+                                <td class="normal drb change_color col16 row42">6.7</td>
+                                <td class="normal ast change_color col17 row42">4.4</td>
+                                <td class="normal stl change_color col18 row42">0.9</td>
+                                <td class="normal blk change_color col19 row42">0.5</td>
+                                <td class="normal tov change_color col20 row42">2.6</td>
+                                <td class="normal pf change_color col21 row42">2.9</td>
+                                <td class="current pts change_color col22 row42">21.7</td>
+                                <td class="normal w change_color col23 row42">366</td>
+                                <td class="normal l change_color col24 row42">253</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row43">44</td>
+                                <td class="normal player_name_out change_color col1 row43"><a class='query_player_name'
+                                                                                              href='./player/4388.html'
+                                                                                              target='_blank'>德文-布克</a>
+                                </td>
+                                <td class="normal g change_color col2 row43">298</td>
+                                <td class="normal gs change_color col3 row43">273</td>
+                                <td class="normal mp change_color col4 row43">33.1</td>
+                                <td class="normal fgper change_color col5 row43">44.3%</td>
+                                <td class="normal fg change_color col6 row43">7.5</td>
+                                <td class="normal fga change_color col7 row43">17.0</td>
+                                <td class="normal threepper change_color col8 row43">35.7%</td>
+                                <td class="normal threep change_color col9 row43">2.0</td>
+                                <td class="normal threepa change_color col10 row43">5.5</td>
+                                <td class="normal ftper change_color col11 row43">85.9%</td>
+                                <td class="normal ft change_color col12 row43">4.7</td>
+                                <td class="normal fta change_color col13 row43">5.5</td>
+                                <td class="normal trb change_color col14 row43">3.5</td>
+                                <td class="normal orb change_color col15 row43">0.5</td>
+                                <td class="normal drb change_color col16 row43">3.0</td>
+                                <td class="normal ast change_color col17 row43">4.4</td>
+                                <td class="normal stl change_color col18 row43">0.8</td>
+                                <td class="normal blk change_color col19 row43">0.3</td>
+                                <td class="normal tov change_color col20 row43">3.2</td>
+                                <td class="normal pf change_color col21 row43">3.1</td>
+                                <td class="current pts change_color col22 row43">21.7</td>
+                                <td class="normal w change_color col23 row43">86</td>
+                                <td class="normal l change_color col24 row43">212</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row44">45</td>
+                                <td class="normal player_name_out change_color col1 row44"><a class='query_player_name'
+                                                                                              href='./player/998.html'
+                                                                                              target='_blank'>阿历克斯-英格利什</a>
+                                </td>
+                                <td class="normal g change_color col2 row44">1193</td>
+                                <td class="normal gs change_color col3 row44"></td>
+                                <td class="normal mp change_color col4 row44">31.9</td>
+                                <td class="normal fgper change_color col5 row44">50.7%</td>
+                                <td class="normal fg change_color col6 row44">8.9</td>
+                                <td class="normal fga change_color col7 row44">17.6</td>
+                                <td class="normal threepper change_color col8 row44"></td>
+                                <td class="normal threep change_color col9 row44"></td>
+                                <td class="normal threepa change_color col10 row44"></td>
+                                <td class="normal ftper change_color col11 row44">83.2%</td>
+                                <td class="normal ft change_color col12 row44">3.6</td>
+                                <td class="normal fta change_color col13 row44">4.3</td>
+                                <td class="normal trb change_color col14 row44">5.5</td>
+                                <td class="normal orb change_color col15 row44">2.3</td>
+                                <td class="normal drb change_color col16 row44">3.2</td>
+                                <td class="normal ast change_color col17 row44">3.6</td>
+                                <td class="normal stl change_color col18 row44">0.9</td>
+                                <td class="normal blk change_color col19 row44">0.7</td>
+                                <td class="normal tov change_color col20 row44"></td>
+                                <td class="normal pf change_color col21 row44">2.5</td>
+                                <td class="current pts change_color col22 row44">21.5</td>
+                                <td class="normal w change_color col23 row44"></td>
+                                <td class="normal l change_color col24 row44"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row45">46</td>
+                                <td class="normal player_name_out change_color col1 row45"><a class='query_player_name'
+                                                                                              href='./player/575.html'
+                                                                                              target='_blank'>德马库斯-考辛斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row45">565</td>
+                                <td class="normal gs change_color col3 row45">543</td>
+                                <td class="normal mp change_color col4 row45">32.0</td>
+                                <td class="normal fgper change_color col5 row45">46.1%</td>
+                                <td class="normal fg change_color col6 row45">7.6</td>
+                                <td class="normal fga change_color col7 row45">16.5</td>
+                                <td class="normal threepper change_color col8 row45">33.2%</td>
+                                <td class="normal threep change_color col9 row45">0.6</td>
+                                <td class="normal threepa change_color col10 row45">1.8</td>
+                                <td class="normal ftper change_color col11 row45">73.7%</td>
+                                <td class="normal ft change_color col12 row45">5.5</td>
+                                <td class="normal fta change_color col13 row45">7.4</td>
+                                <td class="normal trb change_color col14 row45">10.9</td>
+                                <td class="normal orb change_color col15 row45">2.8</td>
+                                <td class="normal drb change_color col16 row45">8.1</td>
+                                <td class="normal ast change_color col17 row45">3.2</td>
+                                <td class="normal stl change_color col18 row45">1.4</td>
+                                <td class="normal blk change_color col19 row45">1.2</td>
+                                <td class="normal tov change_color col20 row45">3.5</td>
+                                <td class="normal pf change_color col21 row45">3.8</td>
+                                <td class="current pts change_color col22 row45">21.2</td>
+                                <td class="normal w change_color col23 row45">229</td>
+                                <td class="normal l change_color col24 row45">336</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row46">47</td>
+                                <td class="normal player_name_out change_color col1 row46"><a class='query_player_name'
+                                                                                              href='./player/3003.html'
+                                                                                              target='_blank'>大卫-罗宾逊</a>
+                                </td>
+                                <td class="normal g change_color col2 row46">987</td>
+                                <td class="normal gs change_color col3 row46">985</td>
+                                <td class="normal mp change_color col4 row46">34.7</td>
+                                <td class="normal fgper change_color col5 row46">51.8%</td>
+                                <td class="normal fg change_color col6 row46">7.5</td>
+                                <td class="normal fga change_color col7 row46">14.4</td>
+                                <td class="normal threepper change_color col8 row46">25.0%</td>
+                                <td class="normal threep change_color col9 row46">0.0</td>
+                                <td class="normal threepa change_color col10 row46">0.1</td>
+                                <td class="normal ftper change_color col11 row46">73.6%</td>
+                                <td class="normal ft change_color col12 row46">6.1</td>
+                                <td class="normal fta change_color col13 row46">8.3</td>
+                                <td class="normal trb change_color col14 row46">10.6</td>
+                                <td class="normal orb change_color col15 row46">3.1</td>
+                                <td class="normal drb change_color col16 row46">7.5</td>
+                                <td class="normal ast change_color col17 row46">2.5</td>
+                                <td class="normal stl change_color col18 row46">1.4</td>
+                                <td class="normal blk change_color col19 row46">3.0</td>
+                                <td class="normal tov change_color col20 row46">2.4</td>
+                                <td class="normal pf change_color col21 row46">2.9</td>
+                                <td class="current pts change_color col22 row46">21.1</td>
+                                <td class="normal w change_color col23 row46">673</td>
+                                <td class="normal l change_color col24 row46">314</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row47">48</td>
+                                <td class="normal player_name_out change_color col1 row47"><a class='query_player_name'
+                                                                                              href='./player/3046.html'
+                                                                                              target='_blank'>米奇-里奇蒙德</a>
+                                </td>
+                                <td class="normal g change_color col2 row47">976</td>
+                                <td class="normal gs change_color col3 row47">902</td>
+                                <td class="normal mp change_color col4 row47">35.2</td>
+                                <td class="normal fgper change_color col5 row47">45.5%</td>
+                                <td class="normal fg change_color col6 row47">7.5</td>
+                                <td class="normal fga change_color col7 row47">16.4</td>
+                                <td class="normal threepper change_color col8 row47">38.8%</td>
+                                <td class="normal threep change_color col9 row47">1.4</td>
+                                <td class="normal threepa change_color col10 row47">3.5</td>
+                                <td class="normal ftper change_color col11 row47">85.0%</td>
+                                <td class="normal ft change_color col12 row47">4.7</td>
+                                <td class="normal fta change_color col13 row47">5.5</td>
+                                <td class="normal trb change_color col14 row47">3.9</td>
+                                <td class="normal orb change_color col15 row47">0.9</td>
+                                <td class="normal drb change_color col16 row47">3.0</td>
+                                <td class="normal ast change_color col17 row47">3.5</td>
+                                <td class="normal stl change_color col18 row47">1.2</td>
+                                <td class="normal blk change_color col19 row47">0.3</td>
+                                <td class="normal tov change_color col20 row47">2.6</td>
+                                <td class="normal pf change_color col21 row47">2.6</td>
+                                <td class="current pts change_color col22 row47">21.0</td>
+                                <td class="normal w change_color col23 row47">432</td>
+                                <td class="normal l change_color col24 row47">544</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row48">49</td>
+                                <td class="normal player_name_out change_color col1 row48"><a class='query_player_name'
+                                                                                              href='./player/975.html'
+                                                                                              target='_blank'>帕特里克-尤因</a>
+                                </td>
+                                <td class="normal g change_color col2 row48">1183</td>
+                                <td class="normal gs change_color col3 row48">1122</td>
+                                <td class="normal mp change_color col4 row48">34.3</td>
+                                <td class="normal fgper change_color col5 row48">50.4%</td>
+                                <td class="normal fg change_color col6 row48">8.2</td>
+                                <td class="normal fga change_color col7 row48">16.3</td>
+                                <td class="normal threepper change_color col8 row48">15.2%</td>
+                                <td class="normal threep change_color col9 row48">0.0</td>
+                                <td class="normal threepa change_color col10 row48">0.1</td>
+                                <td class="normal ftper change_color col11 row48">74.0%</td>
+                                <td class="normal ft change_color col12 row48">4.6</td>
+                                <td class="normal fta change_color col13 row48">6.2</td>
+                                <td class="normal trb change_color col14 row48">9.8</td>
+                                <td class="normal orb change_color col15 row48">2.3</td>
+                                <td class="normal drb change_color col16 row48">7.5</td>
+                                <td class="normal ast change_color col17 row48">1.9</td>
+                                <td class="normal stl change_color col18 row48">1.0</td>
+                                <td class="normal blk change_color col19 row48">2.4</td>
+                                <td class="normal tov change_color col20 row48">3.0</td>
+                                <td class="normal pf change_color col21 row48">3.4</td>
+                                <td class="current pts change_color col22 row48">21.0</td>
+                                <td class="normal w change_color col23 row48">678</td>
+                                <td class="normal l change_color col24 row48">505</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row49">50</td>
+                                <td class="normal player_name_out change_color col1 row49"><a class='query_player_name'
+                                                                                              href='./player/1568.html'
+                                                                                              target='_blank'>埃尔文-海耶斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row49">1303</td>
+                                <td class="normal gs change_color col3 row49"></td>
+                                <td class="normal mp change_color col4 row49">38.4</td>
+                                <td class="normal fgper change_color col5 row49">45.2%</td>
+                                <td class="normal fg change_color col6 row49">8.4</td>
+                                <td class="normal fga change_color col7 row49">18.6</td>
+                                <td class="normal threepper change_color col8 row49"></td>
+                                <td class="normal threep change_color col9 row49"></td>
+                                <td class="normal threepa change_color col10 row49"></td>
+                                <td class="normal ftper change_color col11 row49">67.0%</td>
+                                <td class="normal ft change_color col12 row49">4.1</td>
+                                <td class="normal fta change_color col13 row49">6.1</td>
+                                <td class="normal trb change_color col14 row49">12.5</td>
+                                <td class="normal orb change_color col15 row49"></td>
+                                <td class="normal drb change_color col16 row49"></td>
+                                <td class="normal ast change_color col17 row49">1.8</td>
+                                <td class="normal stl change_color col18 row49"></td>
+                                <td class="normal blk change_color col19 row49"></td>
+                                <td class="normal tov change_color col20 row49"></td>
+                                <td class="normal pf change_color col21 row49">3.2</td>
+                                <td class="current pts change_color col22 row49">21.0</td>
+                                <td class="normal w change_color col23 row49"></td>
+                                <td class="normal l change_color col24 row49"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row50">51</td>
+                                <td class="normal player_name_out change_color col1 row50"><a class='query_player_name'
+                                                                                              href='./player/539.html'
+                                                                                              target='_blank'>比利·坎宁安</a>
+                                </td>
+                                <td class="normal g change_color col2 row50">654</td>
+                                <td class="normal gs change_color col3 row50"></td>
+                                <td class="normal mp change_color col4 row50">34.3</td>
+                                <td class="normal fgper change_color col5 row50">44.6%</td>
+                                <td class="normal fg change_color col6 row50">7.8</td>
+                                <td class="normal fga change_color col7 row50">17.5</td>
+                                <td class="normal threepper change_color col8 row50"></td>
+                                <td class="normal threep change_color col9 row50"></td>
+                                <td class="normal threepa change_color col10 row50"></td>
+                                <td class="normal ftper change_color col11 row50">72.0%</td>
+                                <td class="normal ft change_color col12 row50">5.2</td>
+                                <td class="normal fta change_color col13 row50">7.2</td>
+                                <td class="normal trb change_color col14 row50">10.1</td>
+                                <td class="normal orb change_color col15 row50"></td>
+                                <td class="normal drb change_color col16 row50"></td>
+                                <td class="normal ast change_color col17 row50">4.0</td>
+                                <td class="normal stl change_color col18 row50"></td>
+                                <td class="normal blk change_color col19 row50"></td>
+                                <td class="normal tov change_color col20 row50"></td>
+                                <td class="normal pf change_color col21 row50">3.7</td>
+                                <td class="current pts change_color col22 row50">20.8</td>
+                                <td class="normal w change_color col23 row50"></td>
+                                <td class="normal l change_color col24 row50"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row51">52</td>
+                                <td class="normal player_name_out change_color col1 row51"><a class='query_player_name'
+                                                                                              href='./player/1580.html'
+                                                                                              target='_blank'>约翰-哈福利切克</a>
+                                </td>
+                                <td class="normal g change_color col2 row51">1270</td>
+                                <td class="normal gs change_color col3 row51"></td>
+                                <td class="normal mp change_color col4 row51">36.6</td>
+                                <td class="normal fgper change_color col5 row51">43.9%</td>
+                                <td class="normal fg change_color col6 row51">8.3</td>
+                                <td class="normal fga change_color col7 row51">18.8</td>
+                                <td class="normal threepper change_color col8 row51"></td>
+                                <td class="normal threep change_color col9 row51"></td>
+                                <td class="normal threepa change_color col10 row51"></td>
+                                <td class="normal ftper change_color col11 row51">81.5%</td>
+                                <td class="normal ft change_color col12 row51">4.2</td>
+                                <td class="normal fta change_color col13 row51">5.2</td>
+                                <td class="normal trb change_color col14 row51">6.3</td>
+                                <td class="normal orb change_color col15 row51"></td>
+                                <td class="normal drb change_color col16 row51"></td>
+                                <td class="normal ast change_color col17 row51">4.8</td>
+                                <td class="normal stl change_color col18 row51"></td>
+                                <td class="normal blk change_color col19 row51"></td>
+                                <td class="normal tov change_color col20 row51"></td>
+                                <td class="normal pf change_color col21 row51">2.6</td>
+                                <td class="current pts change_color col22 row51">20.8</td>
+                                <td class="normal w change_color col23 row51"></td>
+                                <td class="normal l change_color col24 row51"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row52">53</td>
+                                <td class="normal player_name_out change_color col1 row52"><a class='query_player_name'
+                                                                                              href='./player/2581.html'
+                                                                                              target='_blank'>德克-诺维茨基</a>
+                                </td>
+                                <td class="normal g change_color col2 row52">1522</td>
+                                <td class="normal gs change_color col3 row52">1460</td>
+                                <td class="normal mp change_color col4 row52">33.7</td>
+                                <td class="normal fgper change_color col5 row52">47.1%</td>
+                                <td class="normal fg change_color col6 row52">7.3</td>
+                                <td class="normal fga change_color col7 row52">15.6</td>
+                                <td class="normal threepper change_color col8 row52">38.0%</td>
+                                <td class="normal threep change_color col9 row52">1.3</td>
+                                <td class="normal threepa change_color col10 row52">3.4</td>
+                                <td class="normal ftper change_color col11 row52">87.9%</td>
+                                <td class="normal ft change_color col12 row52">4.8</td>
+                                <td class="normal fta change_color col13 row52">5.4</td>
+                                <td class="normal trb change_color col14 row52">7.5</td>
+                                <td class="normal orb change_color col15 row52">1.0</td>
+                                <td class="normal drb change_color col16 row52">6.6</td>
+                                <td class="normal ast change_color col17 row52">2.4</td>
+                                <td class="normal stl change_color col18 row52">0.8</td>
+                                <td class="normal blk change_color col19 row52">0.8</td>
+                                <td class="normal tov change_color col20 row52">1.6</td>
+                                <td class="normal pf change_color col21 row52">2.4</td>
+                                <td class="current pts change_color col22 row52">20.7</td>
+                                <td class="normal w change_color col23 row52">916</td>
+                                <td class="normal l change_color col24 row52">606</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row53">54</td>
+                                <td class="normal player_name_out change_color col1 row53"><a class='query_player_name'
+                                                                                              href='./player/807.html'
+                                                                                              target='_blank'>约翰-德鲁</a>
+                                </td>
+                                <td class="normal g change_color col2 row53">739</td>
+                                <td class="normal gs change_color col3 row53"></td>
+                                <td class="normal mp change_color col4 row53">29.5</td>
+                                <td class="normal fgper change_color col5 row53">47.0%</td>
+                                <td class="normal fg change_color col6 row53">7.4</td>
+                                <td class="normal fga change_color col7 row53">15.8</td>
+                                <td class="normal threepper change_color col8 row53"></td>
+                                <td class="normal threep change_color col9 row53"></td>
+                                <td class="normal threepa change_color col10 row53"></td>
+                                <td class="normal ftper change_color col11 row53">74.8%</td>
+                                <td class="normal ft change_color col12 row53">5.8</td>
+                                <td class="normal fta change_color col13 row53">7.8</td>
+                                <td class="normal trb change_color col14 row53">6.9</td>
+                                <td class="normal orb change_color col15 row53">2.9</td>
+                                <td class="normal drb change_color col16 row53">4.0</td>
+                                <td class="normal ast change_color col17 row53">1.7</td>
+                                <td class="normal stl change_color col18 row53">1.4</td>
+                                <td class="normal blk change_color col19 row53">0.3</td>
+                                <td class="normal tov change_color col20 row53"></td>
+                                <td class="normal pf change_color col21 row53">3.6</td>
+                                <td class="current pts change_color col22 row53">20.7</td>
+                                <td class="normal w change_color col23 row53"></td>
+                                <td class="normal l change_color col24 row53"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row54">55</td>
+                                <td class="normal player_name_out change_color col1 row54"><a class='query_player_name'
+                                                                                              href='./player/3000.html'
+                                                                                              target='_blank'>格伦-罗宾逊</a>
+                                </td>
+                                <td class="normal g change_color col2 row54">688</td>
+                                <td class="normal gs change_color col3 row54">668</td>
+                                <td class="normal mp change_color col4 row54">36.8</td>
+                                <td class="normal fgper change_color col5 row54">45.9%</td>
+                                <td class="normal fg change_color col6 row54">8.1</td>
+                                <td class="normal fga change_color col7 row54">17.6</td>
+                                <td class="normal threepper change_color col8 row54">34.0%</td>
+                                <td class="normal threep change_color col9 row54">0.9</td>
+                                <td class="normal threepa change_color col10 row54">2.6</td>
+                                <td class="normal ftper change_color col11 row54">82.0%</td>
+                                <td class="normal ft change_color col12 row54">3.6</td>
+                                <td class="normal fta change_color col13 row54">4.4</td>
+                                <td class="normal trb change_color col14 row54">6.1</td>
+                                <td class="normal orb change_color col15 row54">1.5</td>
+                                <td class="normal drb change_color col16 row54">4.6</td>
+                                <td class="normal ast change_color col17 row54">2.7</td>
+                                <td class="normal stl change_color col18 row54">1.2</td>
+                                <td class="normal blk change_color col19 row54">0.6</td>
+                                <td class="normal tov change_color col20 row54">3.1</td>
+                                <td class="normal pf change_color col21 row54">2.7</td>
+                                <td class="current pts change_color col22 row54">20.7</td>
+                                <td class="normal w change_color col23 row54">314</td>
+                                <td class="normal l change_color col24 row54">374</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row55">56</td>
+                                <td class="normal player_name_out change_color col1 row55"><a class='query_player_name'
+                                                                                              href='./player/3952.html'
+                                                                                              target='_blank'>克里斯-韦伯</a>
+                                </td>
+                                <td class="normal g change_color col2 row55">831</td>
+                                <td class="normal gs change_color col3 row55">827</td>
+                                <td class="normal mp change_color col4 row55">37.1</td>
+                                <td class="normal fgper change_color col5 row55">47.9%</td>
+                                <td class="normal fg change_color col6 row55">8.7</td>
+                                <td class="normal fga change_color col7 row55">18.1</td>
+                                <td class="normal threepper change_color col8 row55">29.9%</td>
+                                <td class="normal threep change_color col9 row55">0.3</td>
+                                <td class="normal threepa change_color col10 row55">1.1</td>
+                                <td class="normal ftper change_color col11 row55">64.9%</td>
+                                <td class="normal ft change_color col12 row55">3.0</td>
+                                <td class="normal fta change_color col13 row55">4.7</td>
+                                <td class="normal trb change_color col14 row55">9.8</td>
+                                <td class="normal orb change_color col15 row55">2.7</td>
+                                <td class="normal drb change_color col16 row55">7.0</td>
+                                <td class="normal ast change_color col17 row55">4.2</td>
+                                <td class="normal stl change_color col18 row55">1.4</td>
+                                <td class="normal blk change_color col19 row55">1.4</td>
+                                <td class="normal tov change_color col20 row55">2.8</td>
+                                <td class="normal pf change_color col21 row55">3.2</td>
+                                <td class="current pts change_color col22 row55">20.7</td>
+                                <td class="normal w change_color col23 row55">472</td>
+                                <td class="normal l change_color col24 row55">359</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row56">57</td>
+                                <td class="normal player_name_out change_color col1 row56"><a class='query_player_name'
+                                                                                              href='./player/37.html'
+                                                                                              target='_blank'>吉尔伯特-阿里纳斯</a>
+                                </td>
+                                <td class="normal g change_color col2 row56">552</td>
+                                <td class="normal gs change_color col3 row56">455</td>
+                                <td class="normal mp change_color col4 row56">35.1</td>
+                                <td class="normal fgper change_color col5 row56">42.1%</td>
+                                <td class="normal fg change_color col6 row56">6.7</td>
+                                <td class="normal fga change_color col7 row56">16.0</td>
+                                <td class="normal threepper change_color col8 row56">35.1%</td>
+                                <td class="normal threep change_color col9 row56">2.0</td>
+                                <td class="normal threepa change_color col10 row56">5.6</td>
+                                <td class="normal ftper change_color col11 row56">80.3%</td>
+                                <td class="normal ft change_color col12 row56">5.2</td>
+                                <td class="normal fta change_color col13 row56">6.5</td>
+                                <td class="normal trb change_color col14 row56">3.9</td>
+                                <td class="normal orb change_color col15 row56">0.8</td>
+                                <td class="normal drb change_color col16 row56">3.1</td>
+                                <td class="normal ast change_color col17 row56">5.3</td>
+                                <td class="normal stl change_color col18 row56">1.6</td>
+                                <td class="normal blk change_color col19 row56">0.2</td>
+                                <td class="normal tov change_color col20 row56">3.2</td>
+                                <td class="normal pf change_color col21 row56">3.0</td>
+                                <td class="current pts change_color col22 row56">20.7</td>
+                                <td class="normal w change_color col23 row56">253</td>
+                                <td class="normal l change_color col24 row56">299</td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row57">58</td>
+                                <td class="normal player_name_out change_color col1 row57"><a class='query_player_name'
+                                                                                              href='./player/2544.html'
+                                                                                              target='_blank'>摩西-马龙</a>
+                                </td>
+                                <td class="normal g change_color col2 row57">1329</td>
+                                <td class="normal gs change_color col3 row57"></td>
+                                <td class="normal mp change_color col4 row57">33.9</td>
+                                <td class="normal fgper change_color col5 row57">49.1%</td>
+                                <td class="normal fg change_color col6 row57">7.1</td>
+                                <td class="normal fga change_color col7 row57">14.5</td>
+                                <td class="normal threepper change_color col8 row57"></td>
+                                <td class="normal threep change_color col9 row57"></td>
+                                <td class="normal threepa change_color col10 row57"></td>
+                                <td class="normal ftper change_color col11 row57">76.9%</td>
+                                <td class="normal ft change_color col12 row57">6.4</td>
+                                <td class="normal fta change_color col13 row57">8.3</td>
+                                <td class="normal trb change_color col14 row57">12.2</td>
+                                <td class="normal orb change_color col15 row57">5.1</td>
+                                <td class="normal drb change_color col16 row57">7.1</td>
+                                <td class="normal ast change_color col17 row57">1.4</td>
+                                <td class="normal stl change_color col18 row57">0.8</td>
+                                <td class="normal blk change_color col19 row57">1.3</td>
+                                <td class="normal tov change_color col20 row57"></td>
+                                <td class="normal pf change_color col21 row57">2.3</td>
+                                <td class="current pts change_color col22 row57">20.6</td>
+                                <td class="normal w change_color col23 row57"></td>
+                                <td class="normal l change_color col24 row57"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row58">59</td>
+                                <td class="normal player_name_out change_color col1 row58"><a class='query_player_name'
+                                                                                              href='./player/805.html'
+                                                                                              target='_blank'>克莱德-德雷克斯勒</a>
+                                </td>
+                                <td class="normal g change_color col2 row58">1086</td>
+                                <td class="normal gs change_color col3 row58">950</td>
+                                <td class="normal mp change_color col4 row58">34.6</td>
+                                <td class="normal fgper change_color col5 row58">47.2%</td>
+                                <td class="normal fg change_color col6 row58">7.7</td>
+                                <td class="normal fga change_color col7 row58">16.3</td>
+                                <td class="normal threepper change_color col8 row58">31.8%</td>
+                                <td class="normal threep change_color col9 row58">0.8</td>
+                                <td class="normal threepa change_color col10 row58">2.4</td>
+                                <td class="normal ftper change_color col11 row58">78.8%</td>
+                                <td class="normal ft change_color col12 row58">4.3</td>
+                                <td class="normal fta change_color col13 row58">5.5</td>
+                                <td class="normal trb change_color col14 row58">6.1</td>
+                                <td class="normal orb change_color col15 row58">2.4</td>
+                                <td class="normal drb change_color col16 row58">3.7</td>
+                                <td class="normal ast change_color col17 row58">5.6</td>
+                                <td class="normal stl change_color col18 row58">2.0</td>
+                                <td class="normal blk change_color col19 row58">0.7</td>
+                                <td class="normal tov change_color col20 row58">2.7</td>
+                                <td class="normal pf change_color col21 row58">3.0</td>
+                                <td class="current pts change_color col22 row58">20.4</td>
+                                <td class="normal w change_color col23 row58"></td>
+                                <td class="normal l change_color col24 row58"></td>
+                            </tr>
+                            <tr>
+                                <td class="normal row change_color col0 row59">60</td>
+                                <td class="normal player_name_out change_color col1 row59"><a class='query_player_name'
+                                                                                              href='./player/1689.html'
+                                                                                              target='_blank'>丹-伊塞尔</a>
+                                </td>
+                                <td class="normal g change_color col2 row59">718</td>
+                                <td class="normal gs change_color col3 row59"></td>
+                                <td class="normal mp change_color col4 row59">31.1</td>
+                                <td class="normal fgper change_color col5 row59">50.6%</td>
+                                <td class="normal fg change_color col6 row59">7.6</td>
+                                <td class="normal fga change_color col7 row59">14.9</td>
+                                <td class="normal threepper change_color col8 row59"></td>
+                                <td class="normal threep change_color col9 row59"></td>
+                                <td class="normal threepa change_color col10 row59"></td>
+                                <td class="normal ftper change_color col11 row59">79.7%</td>
+                                <td class="normal ft change_color col12 row59">5.3</td>
+                                <td class="normal fta change_color col13 row59">6.6</td>
+                                <td class="normal trb change_color col14 row59">7.9</td>
+                                <td class="normal orb change_color col15 row59">2.3</td>
+                                <td class="normal drb change_color col16 row59">5.6</td>
+                                <td class="normal ast change_color col17 row59">2.5</td>
+                                <td class="normal stl change_color col18 row59">1.0</td>
+                                <td class="normal blk change_color col19 row59">0.6</td>
+                                <td class="normal tov change_color col20 row59"></td>
+                                <td class="normal pf change_color col21 row59">2.8</td>
+                                <td class="current pts change_color col22 row59">20.4</td>
+                                <td class="normal w change_color col23 row59"></td>
+                                <td class="normal l change_color col24 row59"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="queryinfo" style="float: right">
+                        <a class="page" href="javascript:exportExcel()">EXCEL</a>
+                        <a class="page"
+                           href="/query.php?page=1&QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=60#label_show_result">下一页></a>
+                        <a class="page" href="javascript:tiaozhuan()">跳转页面</a>
+                        <div style="float:right;margin-top:4px;">
+                            <input id="PageNum" name="PageNum" value="{page}" class="text" type="text"
+                                   style="width:20px;vertical-align: middle; color: #00d6ff; font-weight: bold; float: left; display: block; line-height: 18px; height: 18px; background: #010a51; border: none; padding: 0;"
+                                   onfocus="if (value =='**'){value =''}; this.select()"
+                                   onblur="if (value ==''){value='**'} limitInput('PageNum',0,'**')"
+                                   onmouseover="this.select();this.value=this.value"></div>
+                        <div class="roo" style="float: right;">
+                            <font class="sstrong">共</font>4469<font class="sstrong">条记录，当前显示</font>1-60<font
+                                class="sstrong">条</font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form style="display:none" action="/excelExporter.php" id="excelForm" method="post">
+                <textarea name="data"></textarea>
+            </form>
+        </div>
+        <div class="backgf">
+            <div class="bdf"></div>
+            <div class="bdf" style="float: right"></div>
+            <div class="fftext" style="width:620px">
+                友情链接 (<a href="/about.php#contactus" style="color: white">联系</a>)
+                <a target="_blank" href="http://www.52waha.com">哇哈体育</a>
+                <a target="_blank" href="http://www.forshine.net">英超直播</a>
+                <a target="_blank" href="http://sports.39.net/">运动健身</a>
+                <a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&kw=nba">百度NBA吧</a>
+                <a target="_blank" href="http://www.98nba.com">NBA录像</a>
+                <a target="_blank" href="http://www.cctv5zb.com">CCTV5节目表</a>
+                <a target="_blank" href="http://www.cctv5bo.com">CCTV5在线直播</a>
+                <a target="_blank" href="http://www.102tv.cn">世界杯录像</a>
+                <a target="_blank" href="http://www.sopnba.com/">直播吧</a>
+                <a target="_blank" href="http://www.klnba.com.cn/">NBA2K14修改器</a>
+                <a target="_blank" href="http://www.glsport.cn">体育在线直播</a>
+                <a target="_blank" href="http://www.rookie-nba.com/">NBA新秀</a>
+            </div>
+            <div class="fftext" style="float: right;text-align: right;">
+                <a href="http://www.miitbeian.gov.cn/" style="color: white">京ICP备13012768号-1</a> ©2013 stat-nba.com, all
+                rights reserved
+                <br/>
+                <a href="/about.php#philosophy">网站宗旨</a>
+                <a href="/about.php#faq">常见问题</a>
+                <a href="/about.php#glossary">术语解释</a>
+                <a href="/about.php#contactus">联系我们</a>
+                <a href="http://bbs.stat-nba.com/forum.php?mod=forumdisplay&fid=38">意见反馈</a>
+            </div>
+            <div style="float:left;width:800px;height:100px"></div>
+            <div class="fixed_side" style="position:fixed;top:50px;left:0px;z-index:-99">
+
+                <script type="text/javascript">
+
+                    (function () {
+
+                        var s = "_" + Math.random().toString(36).slice(2);
+
+                        document.write('<div style="" id="' + s + '"></div>');
+
+                        (window.slotbydup = window.slotbydup || []).push({
+
+                            id: "u3773342",
+
+                            container: s
+
+                        });
+
+                    })();
+
+                </script>
+
+            </div>
+
+        </div>
+        <div id="ad_video" class="fixed_side" style="position:fixed;top:50px;right:0px;z-index:-9999">
+
+            <p style="text-align: center;z-index:-9999;">
+                <iframe class="video_iframe" style="z-index:-9999;"
+                        src="https://v.qq.com/iframe/player.html?vid=z0810i9p2vk&amp;width=200&amp;height=429&amp;auto=1&amp;"
+                        allowfullscreen="" frameborder="0" height="439" width="200"></iframe>
+            </p>
+            <br/><a target="_blank" href="http://service.qiuzhang.com/home/AdTafficRecord?sourcetag=ad_statnba_sj"
+                    style="color:#00d6ff">App下载地址</a>
+        </div>
+
+
+        <script>
+
+            $(function () {
+
+                if ($(".fixed_side").length > 0) {
+
+                    var offset = $(".fixed_side").offset();
+
+                    $(window).scroll(function () {
+
+                        var scrollTop = $(window).scrollTop();
+
+//如果距离顶部的距离小于浏览器滚动的距离，则添加fixed属性。
+
+                        if (offset.top < scrollTop) $(".fixed_side").addClass("fixed");
+
+//否则清除fixed的css属性
+
+                        else $(".fixed_side").removeClass("fixed");
+
+                    });
+                }
+            });
+
+        </script>
+        <script>
+
+            var isMobile = {
+
+                Android: function () {
+
+                    return navigator.userAgent.match(/Android/i);
+
+                },
+
+                BlackBerry: function () {
+
+                    return navigator.userAgent.match(/BlackBerry/i);
+
+                },
+
+                iOS: function () {
+
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+
+                },
+
+                Opera: function () {
+
+                    return navigator.userAgent.match(/Opera Mini/i);
+
+                },
+
+                Windows: function () {
+
+                    return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+
+                },
+
+                any: function () {
+
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+
+                }
+
+            };
+
+            // ckground').css("width", "1050px")
+
+
+            if (isMobile.any()) {
+
+                $('#background').css("z-index", "-1050")
+
+                $('#fanzhi').css("z-index", "-9999")
+
+                $('#fanzhi1').css("z-index", "-9999")
+
+                $('#ad_video').css("z-index", "-9999")
+
+                $('#page').css("width", "1300px")
+
+                $('#page').css("float", "left")
+
+                $('#background').css("margin", "0px 190px 0 120px")
+
+            } else {
+
+                //	alert($(window).width());
+
+                if ($(window).width() < 1380) {
+
+//alert('test')
+
+                    $('#ad_video').remove()
+
+                }
+
+            }
+
+
+            //document.writeln(" 是否为移动终端: "+isMobile.any());
+
+        </script>
+    </div>
+
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer"></script>
+</div>
+</div>
+<script type="text/javascript">
+
+    function tiaozhuan() {
+
+        window.location.href = "/query.php?page=0&QueryType=all&AllType=season&AT=avg&order=1&crtcol=pts&PageNum=60#label_show_result".replace("page=0", "page=" + $("#PageNum").val())
+
+    }
+
+    $('.change_color').hover(function () {
+
+        var cls = $(this).attr("class").split(' ');
+
+        $('.' + cls[3]).css('background', '#011233')
+
+        $('.' + cls[4]).css('background', '#011233')
+
+    }, function () {
+
+        var cls = $(this).attr("class").split(' ');
+
+        $('.' + cls[3]).css('background', 'none')
+
+        $('.' + cls[4]).css('background', 'none')
+
+    })
+
+    $('.change_col').hover(function () {
+
+        var cls = $(this).attr("class").split(' ');
+
+        $('.' + 'col' + cls[3]).css('background', '#011233')
+
+    }, function () {
+
+        var cls = $(this).attr("class").split(' ');
+
+        $('.' + 'col' + cls[3]).css('background', 'none')
+
+    })
+
+</script>
+<script type="text/javascript">
+
+    $.fn.selectRange = function (start, end) {
+
+        return this.each(function () {
+
+            if (this.setSelectionRange) {
+
+                this.focus();
+
+                this.setSelectionRange(start, end);
+
+            } else if (this.createTextRange) {
+
+                var range = this.createTextRange();
+
+                range.collapse(true);
+
+                range.moveEnd('character', end);
+
+                range.moveStart('character', start);
+
+                range.select();
+
+            }
+
+        });
+
+    };
+
+    String.prototype.replaceallall = function (s1, s2) {
+
+        var demo = this
+
+        while (demo.indexOf(s1) != -1)
+
+            demo = demo.replace(s1, s2);
+
+        return demo;
+
+    }
+
+    function js_order(column, order) {
+
+        if (column == 'row')
+
+            return;
+
+        if (order == '-1') {
+
+            if (column == 'player_name_out')
+
+                order = 0
+
+            else
+
+                order = 1;
+
+        } else
+
+            order = 1 - parseInt(order);
+
+        var url = location.href.toString();
+
+        url = url.replace(/#label_show_result/g, "");
+
+        if (url.indexOf('crtcol') > 0)
+
+            url = url.replace(/crtcol=(\w*)(&|$)/, "");
+
+        if (url.indexOf('order') > 0)
+
+            url = url.replace(/order=(\w*)(&|$)/, "");
+
+        if (url.substring(url.length - 1) == '&' || url.substring(url.length - 1) == '?')
+
+            window.location.href = url + "crtcol=" + column + "&order=" + order;
+
+        else {
+
+            if (url.indexOf('?') > 0 || url.indexOf('&') > 0)
+
+                window.location.href = url + "&crtcol=" + column + "&order=" + order;
+
+            else {
+
+                window.location.href = url + "?crtcol=" + column + "&order=" + order;
+
+            }
+
+        }
+
+    }
+
+    function initialize() {
+
+        //处理Formula
+
+        var f = 'no';
+
+        if (f == 'no') {
+
+        } else {
+
+            f = f.replaceallall('((pts+ast+trb+stl+blk)-(fga-fg)-(fta-ft)-tov)', '球员效率指数');
+
+            f = f.replaceallall('(pts/(2*(fga+0.44*fta))*100)', '真实命中率');
+
+            f = f.replaceallall('(pts+0.4*fg-0.7*fga-0.4*(fta-ft)+0.7*orb+0.3*drb+stl+0.7*ast+0.7*blk-0.4*pf-tov)', 'GmSc效率值');
+
+
+            f = f.replaceallall('(fga-fg)', '打铁数');
+
+
+            f = f.replaceallall('result_out_l', '负场');
+
+            f = f.replaceallall('result_out_w', '胜场');
+
+            f = f.replaceallall('result_out_g', '总场次');
+
+
+            f = f.replaceallall('pts', '得分');
+
+            f = f.replaceallall('ast', '助攻数');
+
+            f = f.replaceallall('trb', '总篮板数');
+
+            f = f.replaceallall('orb', '前场篮板数');
+
+            f = f.replaceallall('drb', '后场篮板数');
+
+            f = f.replaceallall('mp', '出场时间');
+
+            f = f.replaceallall('stl', '抢断数');
+
+            f = f.replaceallall('blk', '盖帽数');
+
+            f = f.replaceallall('tov', '失误数');
+
+            f = f.replaceallall('pf', '犯规数');
+
+            f = f.replaceallall('fgper', '投篮命中率');
+
+            f = f.replaceallall('fga', '投篮出手数');
+
+            f = f.replaceallall('fg', '投篮命中数');
+
+            f = f.replaceallall('threepper', '三分命中率');
+
+            f = f.replaceallall('threepa', '三分出手数');
+
+            f = f.replaceallall('threep', '三分命中数');
+
+            f = f.replaceallall('ftper', '罚球命中率');
+
+            f = f.replaceallall('fta', '罚球出手数');
+
+            f = f.replaceallall('ft', '罚球命中数');
+
+
+            f = f.replace('球员效率指数', '球员效率指数<a target="_blank" href="./about.php#faq" style="font-size:12px;">(具体公式)</a>');
+
+            f = f.replace('真实命中率', '真实命中率<a target="_blank" href="./about.php#faq" style="font-size:12px;">(具体公式)</a>');
+
+            f = f.replace('GmSc效率值', 'GmSc效率值<a target="_blank" href="./about.php#faq" style="font-size:12px;">(具体公式)</a>');
+
+            $("#tipFormular").html(f + '');
+
+
+        }
+
+    }
+
+    initialize();
+
+    function exportExcel() {
+
+        var html = 'STAT-NBA query results' + '|||';
+
+        for (var j = 0; j < $("table.stat_box tr:eq(" + 0 + ") th").length; j++) {
+
+            html += $("table.stat_box tr:eq(" + 0 + ") th:eq(" + j + ")").text();
+
+            html += "|";
+
+        }
+
+        html += "|";
+
+        for (var i = 1; i < $("table.stat_box tr").length; i++) {
+
+            for (var j = 0; j < $("table.stat_box tr:eq(" + i + ") td").length; j++) {
+
+                t = $("table.stat_box tr:eq(" + i + ") td:eq(" + j + ")").text();
+
+                if (t == '')
+
+                    t = ' ';
+
+                html += t;
+
+                html += "|";
+
+            }
+
+            html += "|";
+
+        }
+
+        $('#excelForm [name=data]').html(html);
+
+        $('#excelForm').submit();
+
+    }
+
+</script>
+<script type="text/javascript" src="https://idm-su.baidu.com/su_new.js"></script>
+</body>
+</html>
